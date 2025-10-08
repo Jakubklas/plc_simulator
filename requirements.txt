@@ -1,0 +1,5 @@
+pandas
+# grpcio-tools
+# apache-flink
+numpy
+pymodbus
