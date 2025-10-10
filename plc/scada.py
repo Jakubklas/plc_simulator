@@ -1,24 +1,23 @@
-#!/usr/bin/env python3
-"""
-Modbus TCP Client - SCADA Interface for Water Treatment Plant
-Runs on Mac to control and monitor the PLC
-"""
-
 import time
 from pymodbus.client import ModbusTcpClient
 from datetime import datetime
 
 
 class WaterPlantSCADA:
-    """SCADA interface for the water treatment plant PLC"""
+    """
+    SCADA interface for the water treatment plant PLC
+    """
     
     def __init__(self, host, port=502):
         self.host = host
         self.port = port
         self.client = None
-        
+
+
     def connect(self):
-        """Connect to the PLC"""
+        """
+        Connect to the PLC
+        """
         print(f"Connecting to PLC at {self.host}:{self.port}...")
         self.client = ModbusTcpClient(self.host, port=self.port)
         
@@ -29,14 +28,20 @@ class WaterPlantSCADA:
             print("✗ Connection failed!")
             return False
     
+
     def disconnect(self):
-        """Disconnect from the PLC"""
+        """
+        Disconnect from the PLC
+        """
         if self.client:
             self.client.close()
             print("\nDisconnected from PLC")
     
+
     def read_sensors(self):
-        """Read all sensor values from input registers"""
+        """
+        Read all sensor values from input registers
+        """
         try:
             # Read input registers 0-5
             result = self.client.read_input_registers(address=0, count=6, slave=0x00)
@@ -61,7 +66,9 @@ class WaterPlantSCADA:
             return None
     
     def read_status(self):
-        """Read discrete inputs (status indicators)"""
+        """
+        Read discrete inputs (status indicators)
+        """
         try:
             result = self.client.read_discrete_inputs(address=0, count=8, slave=0x00)
             
@@ -86,7 +93,9 @@ class WaterPlantSCADA:
             return None
     
     def read_setpoints(self):
-        """Read setpoint values from holding registers"""
+        """
+        Read setpoint values from holding registers
+        """
         try:
             result = self.client.read_holding_registers(address=0, count=3, slave=0x00)
             
@@ -106,7 +115,9 @@ class WaterPlantSCADA:
             return None
     
     def write_setpoint(self, register, value):
-        """Write a setpoint to holding register"""
+        """
+        Write a setpoint to holding register
+        """
         try:
             result = self.client.write_register(address=register, value=value, slave=0x00)
             
@@ -120,19 +131,27 @@ class WaterPlantSCADA:
             return False
     
     def control_pump(self, state):
-        """Control the pump (coil address 0)"""
+        """
+        Control the pump (coil address 0)
+        """
         return self._write_coil(0, state, "Pump")
     
     def control_valve(self, state):
-        """Control the valve (coil address 1)"""
+        """
+        Control the valve (coil address 1)
+        """
         return self._write_coil(1, state, "Valve")
     
     def control_heater(self, state):
-        """Control the heater (coil address 2)"""
+        """
+        Control the heater (coil address 2)
+        """
         return self._write_coil(2, state, "Heater")
     
     def _write_coil(self, address, state, name):
-        """Write to a coil (digital output)"""
+        """
+        Write to a coil (digital output)
+        """
         try:
             result = self.client.write_coil(address=address, value=state, slave=0x00)
             
@@ -148,7 +167,9 @@ class WaterPlantSCADA:
             return False
     
     def display_dashboard(self):
-        """Display a real-time dashboard of plant status"""
+        """
+        Display a real-time dashboard of plant status
+        """
         print("\n" + "="*70)
         print("WATER TREATMENT PLANT - LIVE DASHBOARD")
         print("="*70)
@@ -207,7 +228,9 @@ class WaterPlantSCADA:
 
 
 def interactive_mode(scada):
-    """Interactive control mode"""
+    """
+    Interactive control mode
+    """
     print("\n" + "="*70)
     print("INTERACTIVE CONTROL MODE")
     print("="*70)
@@ -269,7 +292,9 @@ def interactive_mode(scada):
 
 
 def main():
-    """Main program"""
+    """
+    Main program
+    """
     import sys
     
     if len(sys.argv) < 2:

@@ -69,7 +69,7 @@ class WaterPlantSimulator:
             self.tank_temp += random.uniform(-0.2, 0.2)
             self.ph_level = 7.2 + random.uniform(-0.3, 0.3)
             
-            # Write sensor values to input registers (addresses 0-19)
+            # Write sensor values to input registers (addresses 0-9)
             # Scale values to integers (typical for PLCs)
             registers = [
                 int(self.tank_temp * 100),          # Reg 0: Temperature (scaled x100)
@@ -85,6 +85,11 @@ class WaterPlantSimulator:
             ]
             
             # Update input registers
+            #                                4 = Function code for Input Registers
+            #                                |  0 = Starting at the address zero
+            #                                |  |      Values to write as a list
+            #                                |  |      |
+            #                                v  v      v
             self.context[slave_id].setValues(4, 0, registers)
             
             # Write status to discrete inputs (addresses 0-9)
@@ -92,13 +97,13 @@ class WaterPlantSimulator:
                 self.pump_running,
                 self.valve_open,
                 self.heater_on,
-                self.flow_rate > 50,  # Flow sensor high
-                self.tank_temp > 30,  # Temperature alarm
-                self.inlet_pressure > 4.0,  # Pressure alarm
-                False,  # Emergency stop (not activated)
-                True,   # System healthy
-                False,  # Reserved
-                False,  # Reserved
+                self.flow_rate > 50,            # Flow sensor high
+                self.tank_temp > 30,            # Temperature alarm
+                self.inlet_pressure > 4.0,      # Pressure alarm
+                False,                          # Emergency stop (not activated)
+                True,                           # System healthy
+                False,                          # Reserved
+                False,                          # Reserved
             ]
             
             # Update discrete inputs
