@@ -1,0 +1,1556 @@
+jakubklas@Jakubs-MacBook-Pro ~ % mkdir sensors
+jakubklas@Jakubs-MacBook-Pro ~ % cd sensors
+jakubklas@Jakubs-MacBook-Pro sensors % 
+jakubklas@Jakubs-MacBook-Pro sensors % 
+jakubklas@Jakubs-MacBook-Pro sensors % curl http://192.168.1.247:8000/get_data
+
+{"status":"success","records":[{"id":6,"timestamp":"2025-09-28T15:31:58.943612","data":[{"id":79,"device":"PLC_39","reading":55.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:53.893"},{"id":80,"device":"PLC_47","reading":23.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:53.893"},{"id":81,"device":"PLC_39","reading":17.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:58.925"},{"id":82,"device":"PLC_47","reading":75.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:58.925"}]},{"id":5,"timestamp":"2025-09-28T15:31:48.869137","data":[{"id":75,"device":"PLC_39","reading":19.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:43.800"},{"id":76,"device":"PLC_47","reading":38.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:43.800"},{"id":77,"device":"PLC_39","reading":54.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:48.836"},{"id":78,"device":"PLC_47","reading":53.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:48.836"}]},{"id":4,"timestamp":"2025-09-28T15:31:38.778608","data":[{"id":71,"device":"PLC_39","reading":75.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:33.710"},{"id":72,"device":"PLC_47","reading":72.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:33.710"},{"id":73,"device":"PLC_39","reading":37.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:38.745"},{"id":74,"device":"PLC_47","reading":73.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:38.745"}]},{"id":3,"timestamp":"2025-09-28T15:31:28.678913","data":[{"id":67,"device":"PLC_39","reading":42.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:23.625"},{"id":68,"device":"PLC_47","reading":29.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:23.625"},{"id":69,"device":"PLC_39","reading":46.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:28.653"},{"id":70,"device":"PLC_47","reading":49.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:28.653"}]},{"id":2,"timestamp":"2025-09-28T15:31:18.599817","data":[{"id":63,"device":"PLC_39","reading":71.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:13.537"},{"id":64,"device":"PLC_47","reading":32.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:13.537"},{"id":65,"device":"PLC_39","reading":60.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:31:18.559"},{"id":66,"device":"PLC_47","reading":26.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:31:18.559"}]},{"id":1,"timestamp":"2025-09-28T14:59:06.233224","data":[{"value":23.5,"sensor":"temp"},{"value":45.2,"sensor":"humidity"}]}],"count":6}%                                                                                   jakubklas@Jakubs-MacBook-Pro sensors % curl http://192.168.1.247:8000/get_data
+{"status":"success","records":[{"id":31,"timestamp":"2025-09-28T16:02:19.685281","data":[{"id":483,"device":"PLC_39","reading":58.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:34.350"},{"id":484,"device":"PLC_47","reading":62.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:34.350"},{"id":485,"device":"PLC_39","reading":62.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:39.376"},{"id":486,"device":"PLC_47","reading":21.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:39.376"},{"id":487,"device":"PLC_39","reading":72.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:44.407"},{"id":488,"device":"PLC_47","reading":63.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:44.407"},{"id":489,"device":"PLC_39","reading":35.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:49.436"},{"id":490,"device":"PLC_47","reading":34.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:49.436"},{"id":491,"device":"PLC_39","reading":65.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:54.471"},{"id":492,"device":"PLC_47","reading":34.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:54.471"},{"id":493,"device":"PLC_39","reading":27.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:59.500"},{"id":494,"device":"PLC_47","reading":27.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:59.500"},{"id":495,"device":"PLC_39","reading":57.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:02:04.533"},{"id":496,"device":"PLC_47","reading":51.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:02:04.533"},{"id":497,"device":"PLC_39","reading":63.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:02:09.565"},{"id":498,"device":"PLC_47","reading":59.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:02:09.565"},{"id":499,"device":"PLC_39","reading":21.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:02:14.597"},{"id":500,"device":"PLC_47","reading":50.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:02:14.597"},{"id":501,"device":"PLC_39","reading":27.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:02:19.631"},{"id":502,"device":"PLC_47","reading":57.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:02:19.631"}]},{"id":30,"timestamp":"2025-09-28T16:01:29.324012","data":[{"id":463,"device":"PLC_39","reading":73.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:44.021"},{"id":464,"device":"PLC_47","reading":16.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:44.021"},{"id":465,"device":"PLC_39","reading":49.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:49.052"},{"id":466,"device":"PLC_47","reading":75.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:49.052"},{"id":467,"device":"PLC_39","reading":21.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:54.081"},{"id":468,"device":"PLC_47","reading":51.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:54.081"},{"id":469,"device":"PLC_39","reading":34.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:59.114"},{"id":470,"device":"PLC_47","reading":29.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:59.114"},{"id":471,"device":"PLC_39","reading":46.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:04.149"},{"id":472,"device":"PLC_47","reading":35.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:04.149"},{"id":473,"device":"PLC_39","reading":18.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:09.181"},{"id":474,"device":"PLC_47","reading":66.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:09.181"},{"id":475,"device":"PLC_39","reading":71.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:14.209"},{"id":476,"device":"PLC_47","reading":18.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:14.209"},{"id":477,"device":"PLC_39","reading":69.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:19.238"},{"id":478,"device":"PLC_47","reading":27.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:19.238"},{"id":479,"device":"PLC_39","reading":18.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:24.270"},{"id":480,"device":"PLC_47","reading":32.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:24.270"},{"id":481,"device":"PLC_39","reading":57.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:01:29.296"},{"id":482,"device":"PLC_47","reading":50.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:01:29.296"}]},{"id":29,"timestamp":"2025-09-28T16:00:39.001638","data":[{"id":443,"device":"PLC_39","reading":53.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:53.685"},{"id":444,"device":"PLC_47","reading":35.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:53.685"},{"id":445,"device":"PLC_39","reading":75.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:58.717"},{"id":446,"device":"PLC_47","reading":39.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:58.717"},{"id":447,"device":"PLC_39","reading":18.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:03.751"},{"id":448,"device":"PLC_47","reading":53.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:03.751"},{"id":449,"device":"PLC_39","reading":67.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:08.781"},{"id":450,"device":"PLC_47","reading":51.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:08.781"},{"id":451,"device":"PLC_39","reading":35.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:13.813"},{"id":452,"device":"PLC_47","reading":58.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:13.813"},{"id":453,"device":"PLC_39","reading":40.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:18.844"},{"id":454,"device":"PLC_47","reading":21.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:18.844"},{"id":455,"device":"PLC_39","reading":37.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:23.870"},{"id":456,"device":"PLC_47","reading":51.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:23.870"},{"id":457,"device":"PLC_39","reading":55.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:28.902"},{"id":458,"device":"PLC_47","reading":70.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:28.902"},{"id":459,"device":"PLC_39","reading":68.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:33.932"},{"id":460,"device":"PLC_47","reading":27.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:33.932"},{"id":461,"device":"PLC_39","reading":32.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T16:00:38.966"},{"id":462,"device":"PLC_47","reading":36.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T16:00:38.966"}]},{"id":28,"timestamp":"2025-09-28T15:59:48.661895","data":[{"id":423,"device":"PLC_39","reading":37.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:03.361"},{"id":424,"device":"PLC_47","reading":20.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:03.361"},{"id":425,"device":"PLC_39","reading":70.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:08.399"},{"id":426,"device":"PLC_47","reading":16.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:08.399"},{"id":427,"device":"PLC_39","reading":32.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:13.423"},{"id":428,"device":"PLC_47","reading":21.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:13.423"},{"id":429,"device":"PLC_39","reading":39.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:18.448"},{"id":430,"device":"PLC_47","reading":45.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:18.448"},{"id":431,"device":"PLC_39","reading":75.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:23.479"},{"id":432,"device":"PLC_47","reading":53.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:23.479"},{"id":433,"device":"PLC_39","reading":61.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:28.508"},{"id":434,"device":"PLC_47","reading":70.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:28.508"},{"id":435,"device":"PLC_39","reading":37.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:33.536"},{"id":436,"device":"PLC_47","reading":29.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:33.536"},{"id":437,"device":"PLC_39","reading":48.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:38.565"},{"id":438,"device":"PLC_47","reading":52.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:38.565"},{"id":439,"device":"PLC_39","reading":33.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:43.596"},{"id":440,"device":"PLC_47","reading":38.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:43.596"},{"id":441,"device":"PLC_39","reading":21.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:59:48.627"},{"id":442,"device":"PLC_47","reading":33.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:59:48.627"}]},{"id":27,"timestamp":"2025-09-28T15:58:58.333700","data":[{"id":403,"device":"PLC_39","reading":50.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:13.040"},{"id":404,"device":"PLC_47","reading":44.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:13.040"},{"id":405,"device":"PLC_39","reading":61.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:18.072"},{"id":406,"device":"PLC_47","reading":34.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:18.072"},{"id":407,"device":"PLC_39","reading":46.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:23.102"},{"id":408,"device":"PLC_47","reading":64.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:23.102"},{"id":409,"device":"PLC_39","reading":28.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:28.134"},{"id":410,"device":"PLC_47","reading":46.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:28.134"},{"id":411,"device":"PLC_39","reading":42.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:33.163"},{"id":412,"device":"PLC_47","reading":39.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:33.163"},{"id":413,"device":"PLC_39","reading":16.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:38.190"},{"id":414,"device":"PLC_47","reading":36.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:38.190"},{"id":415,"device":"PLC_39","reading":25.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:43.224"},{"id":416,"device":"PLC_47","reading":39.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:43.224"},{"id":417,"device":"PLC_39","reading":38.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:48.258"},{"id":418,"device":"PLC_47","reading":30.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:48.258"},{"id":419,"device":"PLC_39","reading":17.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:53.287"},{"id":420,"device":"PLC_47","reading":66.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:53.287"},{"id":421,"device":"PLC_39","reading":50.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:58.311"},{"id":422,"device":"PLC_47","reading":45.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:58.311"}]},{"id":26,"timestamp":"2025-09-28T15:58:08.011434","data":[{"id":383,"device":"PLC_39","reading":33.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:22.704"},{"id":384,"device":"PLC_47","reading":66.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:22.704"},{"id":385,"device":"PLC_39","reading":46.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:27.728"},{"id":386,"device":"PLC_47","reading":33.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:27.728"},{"id":387,"device":"PLC_39","reading":52.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:32.757"},{"id":388,"device":"PLC_47","reading":41.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:32.757"},{"id":389,"device":"PLC_39","reading":47.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:37.789"},{"id":390,"device":"PLC_47","reading":74.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:37.789"},{"id":391,"device":"PLC_39","reading":31.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:42.824"},{"id":392,"device":"PLC_47","reading":65.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:42.824"},{"id":393,"device":"PLC_39","reading":39.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:47.857"},{"id":394,"device":"PLC_47","reading":22.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:47.857"},{"id":395,"device":"PLC_39","reading":29.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:52.890"},{"id":396,"device":"PLC_47","reading":73.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:52.890"},{"id":397,"device":"PLC_39","reading":69.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:57.917"},{"id":398,"device":"PLC_47","reading":61.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:57.917"},{"id":399,"device":"PLC_39","reading":64.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:02.946"},{"id":400,"device":"PLC_47","reading":50.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:02.946"},{"id":401,"device":"PLC_39","reading":20.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:58:07.972"},{"id":402,"device":"PLC_47","reading":35.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:58:07.972"}]},{"id":25,"timestamp":"2025-09-28T15:57:17.677680","data":[{"id":363,"device":"PLC_39","reading":25.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:28.392"},{"id":364,"device":"PLC_47","reading":49.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:28.392"},{"id":365,"device":"PLC_39","reading":57.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:33.429"},{"id":366,"device":"PLC_47","reading":27.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:33.429"},{"id":367,"device":"PLC_39","reading":19.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:38.453"},{"id":368,"device":"PLC_47","reading":53.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:38.453"},{"id":369,"device":"PLC_39","reading":18.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:43.479"},{"id":370,"device":"PLC_47","reading":18.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:43.479"},{"id":371,"device":"PLC_39","reading":62.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:48.513"},{"id":372,"device":"PLC_47","reading":38.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:48.513"},{"id":373,"device":"PLC_39","reading":75.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:53.540"},{"id":374,"device":"PLC_47","reading":40.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:53.540"},{"id":375,"device":"PLC_39","reading":24.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:58.624"},{"id":376,"device":"PLC_47","reading":53.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:58.624"},{"id":377,"device":"PLC_39","reading":57.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:47:03.675"},{"id":378,"device":"PLC_47","reading":16.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:47:03.675"},{"id":379,"device":"PLC_39","reading":32.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:47:08.714"},{"id":380,"device":"PLC_47","reading":50.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:47:08.714"},{"id":381,"device":"PLC_39","reading":21.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:57:17.610"},{"id":382,"device":"PLC_47","reading":66.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:57:17.610"}]},{"id":24,"timestamp":"2025-09-28T15:46:23.358983","data":[{"id":343,"device":"PLC_39","reading":60.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:09.712"},{"id":344,"device":"PLC_47","reading":69.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:09.712"},{"id":345,"device":"PLC_39","reading":52.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:14.745"},{"id":346,"device":"PLC_47","reading":37.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:14.745"},{"id":347,"device":"PLC_39","reading":17.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:19.774"},{"id":348,"device":"PLC_47","reading":32.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:19.774"},{"id":349,"device":"PLC_39","reading":40.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:24.793"},{"id":350,"device":"PLC_47","reading":69.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:24.793"},{"id":351,"device":"PLC_39","reading":69.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:29.817"},{"id":352,"device":"PLC_47","reading":33.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:29.817"},{"id":353,"device":"PLC_39","reading":59.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:34.874"},{"id":354,"device":"PLC_47","reading":24.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:34.874"},{"id":355,"device":"PLC_39","reading":39.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:39.902"},{"id":356,"device":"PLC_47","reading":38.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:39.902"},{"id":357,"device":"PLC_39","reading":48.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:13.237"},{"id":358,"device":"PLC_47","reading":55.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:13.237"},{"id":359,"device":"PLC_39","reading":61.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:18.272"},{"id":360,"device":"PLC_47","reading":28.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:18.272"},{"id":361,"device":"PLC_39","reading":17.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:46:23.303"},{"id":362,"device":"PLC_47","reading":61.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:46:23.303"}]},{"id":23,"timestamp":"2025-09-28T15:45:04.696106","data":[{"id":323,"device":"PLC_39","reading":40.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:19.429"},{"id":324,"device":"PLC_47","reading":34.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:19.429"},{"id":325,"device":"PLC_39","reading":16.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:24.447"},{"id":326,"device":"PLC_47","reading":21.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:24.447"},{"id":327,"device":"PLC_39","reading":29.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:29.472"},{"id":328,"device":"PLC_47","reading":32.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:29.472"},{"id":329,"device":"PLC_39","reading":75.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:34.500"},{"id":330,"device":"PLC_47","reading":46.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:34.500"},{"id":331,"device":"PLC_39","reading":72.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:39.533"},{"id":332,"device":"PLC_47","reading":46.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:39.533"},{"id":333,"device":"PLC_39","reading":71.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:44.557"},{"id":334,"device":"PLC_47","reading":18.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:44.557"},{"id":335,"device":"PLC_39","reading":22.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:49.586"},{"id":336,"device":"PLC_47","reading":64.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:49.586"},{"id":337,"device":"PLC_39","reading":22.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:54.614"},{"id":338,"device":"PLC_47","reading":73.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:54.614"},{"id":339,"device":"PLC_39","reading":37.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:59.645"},{"id":340,"device":"PLC_47","reading":52.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:59.645"},{"id":341,"device":"PLC_39","reading":50.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:45:04.674"},{"id":342,"device":"PLC_47","reading":20.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:45:04.674"}]},{"id":22,"timestamp":"2025-09-28T15:44:14.407434","data":[{"id":303,"device":"PLC_39","reading":65.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:29.130"},{"id":304,"device":"PLC_47","reading":50.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:29.130"},{"id":305,"device":"PLC_39","reading":31.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:34.154"},{"id":306,"device":"PLC_47","reading":52.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:34.154"},{"id":307,"device":"PLC_39","reading":61.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:39.181"},{"id":308,"device":"PLC_47","reading":68.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:39.181"},{"id":309,"device":"PLC_39","reading":75.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:44.208"},{"id":310,"device":"PLC_47","reading":40.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:44.208"},{"id":311,"device":"PLC_39","reading":21.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:49.240"},{"id":312,"device":"PLC_47","reading":22.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:49.240"},{"id":313,"device":"PLC_39","reading":31.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:54.265"},{"id":314,"device":"PLC_47","reading":33.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:54.265"},{"id":315,"device":"PLC_39","reading":49.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:43:59.290"},{"id":316,"device":"PLC_47","reading":59.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:43:59.290"},{"id":317,"device":"PLC_39","reading":23.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:04.324"},{"id":318,"device":"PLC_47","reading":22.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:04.324"},{"id":319,"device":"PLC_39","reading":26.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:09.348"},{"id":320,"device":"PLC_47","reading":58.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:09.348"},{"id":321,"device":"PLC_39","reading":62.0,"buffered":1,"sensor_id":"thermometer","timestamp":"2025-09-28T15:44:14.383"},{"id":322,"device":"PLC_47","reading":37.0,"buffered":1,"sensor_id":"barometer","timestamp":"2025-09-28T15:44:14.383"}]}],"count":10}%                                                                                              jakubklas@Jakubs-MacBook-Pro sensors % curl http://192.168.1.247:8000/get_data?max_rows=2
+zsh: no matches found: http://192.168.1.247:8000/get_data?max_rows=2
+jakubklas@Jakubs-MacBook-Pro sensors % curl -X GET http://192.168.1.247:8000/get_data?max_rows=2
+zsh: no matches found: http://192.168.1.247:8000/get_data?max_rows=2
+jakubklas@Jakubs-MacBook-Pro sensors % ssh pi@raspberrypi.local
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 16:48:39 2025
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ ifconfig
+docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:31ff:fefa:d616  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:31:fa:d6:16  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 26  bytes 4973 (4.8 KiB)
+        TX errors 0  dropped 8 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.16  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::8eca:2c15:7a9f:b19f  prefixlen 64  scopeid 0x20<link>
+        ether 2c:cf:67:f1:eb:e7  txqueuelen 1000  (Ethernet)
+        RX packets 75  bytes 18393 (17.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 79  bytes 14167 (13.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 106  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 19  bytes 3043 (2.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 3043 (2.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethdadfb54: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::9431:e9ff:fe68:71b2  prefixlen 64  scopeid 0x20<link>
+        ether 96:31:e9:68:71:b2  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 44  bytes 8154 (7.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+pi@raspberrypi:~ $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro sensors % nmap -sn 192.168.0.16
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-09-29 19:20 +0100
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 3.04 seconds
+jakubklas@Jakubs-MacBook-Pro sensors % ssh pi@192.168.0.16
+^C
+jakubklas@Jakubs-MacBook-Pro sensors % ssh pi@raspberrypi.local
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 16:48:46 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ ssh 192.168.0.16@raspberrypi.local
+^C
+pi@raspberrypi:~ $ ssh pi@192.168.0.16.local
+ssh: Could not resolve hostname 192.168.0.16.local: Temporary failure in name resolution
+pi@raspberrypi:~ $ ssh pi@192.168.0.16
+The authenticity of host '192.168.0.16 (192.168.0.16)' can't be established.
+ED25519 key fingerprint is SHA256:jG3OJsgbvBq5r6rZUAtBfLu3AwOlssranptnatjixRs.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yas
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added '192.168.0.16' (ED25519) to the list of known hosts.
+pi@192.168.0.16's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 16:52:50 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ exit
+logout
+Connection to 192.168.0.16 closed.
+pi@raspberrypi:~ $ docker ps
+CONTAINER ID   IMAGE         COMMAND            CREATED         STATUS         PORTS     NAMES
+e4732f1561d0   repeater:pi   "python3 app.py"   6 minutes ago   Up 6 minutes             repeater
+pi@raspberrypi:~ $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro sensors % docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS        PORTS                    NAMES
+6d456457cfd7   edge_device-edge_app        "python3 app.py"         27 hours ago   Up 27 hours                            edge_application
+3f7d08a9ec75   postgres:13-alpine          "docker-entrypoint.s…"   27 hours ago   Up 27 hours   5432/tcp                 edge_postgres
+86fb4a72f5e4   mac_server-mac_server_app   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:8000->8000/tcp   mac_server_app
+50ee62e48fae   postgres:13-alpine          "docker-entrypoint.s…"   27 hours ago   Up 27 hours   5432/tcp                 mac_server_postres
+86a340c0d854   sensors-thermometer         "python3 app.py"         4 days ago     Up 4 days                              thermometer
+fcf4cf78224d   sensors-barometer           "python3 app.py"         4 days ago     Up 4 days                              barometer
+jakubklas@Jakubs-MacBook-Pro sensors % docker save edge_application   
+cowardly refusing to save to a terminal. Use the -o flag or redirect
+jakubklas@Jakubs-MacBook-Pro sensors % ls                         
+barometer.json		thermometer.json
+jakubklas@Jakubs-MacBook-Pro sensors % docker save edge_application > ./
+zsh: is a directory: ./
+jakubklas@Jakubs-MacBook-Pro sensors % docker edge_application .
+docker: unknown command: docker edge_application
+
+Run 'docker --help' for more information
+jakubklas@Jakubs-MacBook-Pro sensors % docker edge_application -o .               
+unknown shorthand flag: 'o' in -o
+
+Usage:  docker [OPTIONS] COMMAND [ARG...]
+
+Run 'docker --help' for more information
+jakubklas@Jakubs-MacBook-Pro sensors % docker save edge_application.tar edge_application
+cowardly refusing to save to a terminal. Use the -o flag or redirect
+jakubklas@Jakubs-MacBook-Pro sensors % docker save -o edge_application.tar edge_application
+Error response from daemon: No such image: edge_application:latest
+jakubklas@Jakubs-MacBook-Pro sensors % docker images
+REPOSITORY                                                  TAG          IMAGE ID       CREATED        SIZE
+edge_device-edge_app                                        latest       410eedb16442   27 hours ago   351MB
+mac_server-mac_server_app                                   latest       ec6314ab8106   27 hours ago   141MB
+edge_device                                                 latest       008bcfdd0e2a   3 days ago     351MB
+sensors-barometer                                           latest       4a8cc7ba84ea   4 days ago     81.5MB
+sensors-thermometer                                         latest       059a55839a34   4 days ago     81.5MB
+barometer                                                   latest       c7954528490b   4 days ago     81.5MB
+postgres                                                    13-alpine    28ba8bce3181   5 days ago     379MB
+repeater                                                    pi           a11c69bdbd97   8 days ago     81.5MB
+myapp                                                       pi_version   8f855d59e399   11 days ago    81.5MB
+postgres                                                    13           fb11a641ba92   2 weeks ago    641MB
+nginx                                                       alpine       42a516af16b8   6 weeks ago    80.2MB
+hello-world                                                 latest       54e66cc1dd1f   7 weeks ago    16.9kB
+estimator                                                   latest       22ff79d82c85   5 months ago   1.5GB
+591213504950.dkr.ecr.eu-west-2.amazonaws.com/ml_project     latest       4a4979f264e0   5 months ago   264MB
+ml_project                                                  latest       4a4979f264e0   5 months ago   264MB
+<none>                                                      <none>       5ee7a3e4353a   5 months ago   264MB
+<none>                                                      <none>       9b3dd6360200   5 months ago   921MB
+<none>                                                      <none>       d9fa8f95cdf7   5 months ago   921MB
+<none>                                                      <none>       47fc0a691055   5 months ago   592MB
+<none>                                                      <none>       503e09dfb1fd   5 months ago   592MB
+your-image-name                                             latest       ff2da8a71a50   5 months ago   592MB
+<none>                                                      <none>       75f44d972ba5   5 months ago   2.14GB
+<none>                                                      <none>       d74cf65da853   5 months ago   579MB
+<none>                                                      <none>       1d486e9e2a90   6 months ago   2.09GB
+<none>                                                      <none>       4d7515e3bdde   6 months ago   2.09GB
+591213504950.dkr.ecr.eu-west-2.amazonaws.com/test_project   latest       d4c1323b675b   6 months ago   1.72GB
+test_project                                                latest       d4c1323b675b   6 months ago   1.72GB
+jakubklas@Jakubs-MacBook-Pro sensors % docker save -o edge_device-edge_app.tar edge_device-edge_app
+jakubklas@Jakubs-MacBook-Pro sensors % ls
+barometer.json			edge_device-edge_app.tar	thermometer.json
+jakubklas@Jakubs-MacBook-Pro sensors % docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS        PORTS                    NAMES
+6d456457cfd7   edge_device-edge_app        "python3 app.py"         27 hours ago   Up 27 hours                            edge_application
+3f7d08a9ec75   postgres:13-alpine          "docker-entrypoint.s…"   27 hours ago   Up 27 hours   5432/tcp                 edge_postgres
+86fb4a72f5e4   mac_server-mac_server_app   "python3 app.py"         27 hours ago   Up 27 hours   0.0.0.0:8000->8000/tcp   mac_server_app
+50ee62e48fae   postgres:13-alpine          "docker-entrypoint.s…"   27 hours ago   Up 27 hours   5432/tcp                 mac_server_postres
+86a340c0d854   sensors-thermometer         "python3 app.py"         4 days ago     Up 4 days                              thermometer
+fcf4cf78224d   sensors-barometer           "python3 app.py"         4 days ago     Up 4 days                              barometer
+jakubklas@Jakubs-MacBook-Pro sensors % docker save -o edge_device_postgres.tar postgres:13-alpine
+jakubklas@Jakubs-MacBook-Pro sensors % ls 
+barometer.json			edge_device_postgres.tar	edge_device-edge_app.tar	thermometer.json
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device_postgres.tar pi@raspberrypi.local   
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device-edge_app.tar pi@raspberrypi.local
+jakubklas@Jakubs-MacBook-Pro sensors % ssh pi@raspberrypi.local
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 16:54:17 2025 from 192.168.0.16
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ ls
+Bookshelf  Desktop  Documents  Downloads  -e  Music  --name  -p  Pictures  pi-docker  postgres:13  Public  Templates  Videos
+pi@raspberrypi:~ $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device_postgres.tar pi@raspberrypi.local:/pi-docker/ 
+pi@raspberrypi.local's password: 
+scp: dest open "/pi-docker/": Failure
+scp: failed to upload file edge_device_postgres.tar to /pi-docker/
+jakubklas@Jakubs-MacBook-Pro sensors % ssh pi@raspberrypi.local
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:08:27 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ ls
+Bookshelf  Desktop  Documents  Downloads  -e  Music  --name  -p  Pictures  pi-docker  postgres:13  Public  Templates  Videos
+pi@raspberrypi:~ $ cd pi-docker
+pi@raspberrypi:~/pi-docker $ ls
+containerd.io_1.6.28-1_arm64.deb                             hello-world.tar              postgres.tar
+docker-ce_25.0.3-1~debian.12~bookworm_arm64.deb              iptables_1.8.9-2_arm64.deb   repeater.tar
+docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb          libip6tc2_1.8.9-2_arm64.deb
+docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb  nginx-alpine.tar
+pi@raspberrypi:~/pi-docker $ docker ps
+CONTAINER ID   IMAGE         COMMAND            CREATED          STATUS          PORTS     NAMES
+e4732f1561d0   repeater:pi   "python3 app.py"   21 minutes ago   Up 21 minutes             repeater
+pi@raspberrypi:~/pi-docker $ docker stop repeater:pi && docker rm repeater:pi
+Error response from daemon: No such container: repeater:pi
+pi@raspberrypi:~/pi-docker $ docker stop repeater && docker rm repeater
+repeater
+repeater
+pi@raspberrypi:~/pi-docker $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device_postgres.tar pi@raspberrypi.local:/pi-docker/ 
+pi@raspberrypi.local's password: 
+scp: dest open "/pi-docker/": Failure
+scp: failed to upload file edge_device_postgres.tar to /pi-docker/
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device_postgres.tar pi@raspberrypi.local:/           
+pi@raspberrypi.local's password: 
+scp: dest open "/edge_device_postgres.tar": Permission denied
+scp: failed to upload file edge_device_postgres.tar to /
+jakubklas@Jakubs-MacBook-Pro sensors % ls
+barometer.json			edge_device-edge_app.tar	thermometer.json
+edge_device_postgres.tar	pi@raspberrypi.local
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device-edge_app.tar pi@raspberrypi.local:/pi-docker/ 
+pi@raspberrypi.local's password: 
+scp: dest open "/pi-docker/": Failure
+scp: failed to upload file edge_device-edge_app.tar to /pi-docker/
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device-edge_app.tar pi@raspberrypi.local:~/pi-docker/ 
+pi@raspberrypi.local's password: 
+edge_device-edge_app.tar                                                                           100%   91MB 109.6MB/s   00:00    
+jakubklas@Jakubs-MacBook-Pro sensors % scp edge_device_postgres.tar pi@raspberrypi.local:~/pi-docker
+pi@raspberrypi.local's password: 
+Permission denied, please try again.
+pi@raspberrypi.local's password: 
+edge_device_postgres.tar                                                                           100%  101MB 109.8MB/s   00:00    
+jakubklas@Jakubs-MacBook-Pro sensors % ssh pi@raspberrypi.local                                      
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:09:50 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ cd pi-docker
+pi@raspberrypi:~/pi-docker $ ls
+containerd.io_1.6.28-1_arm64.deb                             edge_device-edge_app.tar    libip6tc2_1.8.9-2_arm64.deb
+docker-ce_25.0.3-1~debian.12~bookworm_arm64.deb              edge_device_postgres.tar    nginx-alpine.tar
+docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb          hello-world.tar             postgres.tar
+docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb  iptables_1.8.9-2_arm64.deb  repeater.tar
+pi@raspberrypi:~/pi-docker $ sudo docker load edge_device_postgres.tar
+"docker load" accepts no arguments.
+See 'docker load --help'.
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+pi@raspberrypi:~/pi-docker $ docker --version
+Docker version 25.0.3, build 4debf41
+pi@raspberrypi:~/pi-docker $ docker load --help
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+
+Aliases:
+  docker image load, docker load
+
+Options:
+  -i, --input string   Read from tar archive file, instead of STDIN
+  -q, --quiet          Suppress the load output
+pi@raspberrypi:~/pi-docker $ docker load -i edge_device_postgres.tar
+d900fe72aa18: Loading layer [==================================================>]     971B/971B
+1eeb88b7d09c: Loading layer [==================================================>]  869.7kB/869.7kB
+a9d24c7e9b53: Loading layer [==================================================>]     177B/177B
+b29d8fc6dac2: Loading layer [==================================================>]     114B/114B
+64d787027095: Loading layer [==================================================>]  100.4MB/100.4MB
+ac4fa4e9dd81: Loading layer [==================================================>]  9.016kB/9.016kB
+8cd3a7224f10: Loading layer [==================================================>]     128B/128B
+39a506910326: Loading layer [==================================================>]     171B/171B
+c746c1c6ae64: Loading layer [==================================================>]  5.925kB/5.925kB
+4d31a5e7cf20: Loading layer [==================================================>]     184B/184B
+Loaded image: postgres:13-alpine
+pi@raspberrypi:~/pi-docker $ docker run postgres:13-alpine
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+pi@raspberrypi:~/pi-docker $ docker run postgres:13-alpine \
+> -e POSTGRES_PASSWORD=pwd
+Error: Database is uninitialized and superuser password is not specified.
+       You must specify POSTGRES_PASSWORD to a non-empty value for the
+       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
+
+       You may also use "POSTGRES_HOST_AUTH_METHOD=trust" to allow all
+       connections without a password. This is *not* recommended.
+
+       See PostgreSQL documentation about "trust":
+       https://www.postgresql.org/docs/current/auth-trust.html
+pi@raspberrypi:~/pi-docker $ -docker run postgres:13-alpine \
+> -e POSTGRES_PASSWORD=pwd \
+> -e POSTGRED_DB=^C
+pi@raspberrypi:~/pi-docker $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro sensors % cd ~
+jakubklas@Jakubs-MacBook-Pro ~ % cd myapp-docker
+jakubklas@Jakubs-MacBook-Pro myapp-docker % ls
+edge_device	mac_server	readings	sensors
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_device pi@raspberrypi.local:~/pi-docker
+pi@raspberrypi.local's password: 
+scp: local "edge_device" is not a regular file
+scp: failed to upload file edge_device to ~/pi-docker
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp -r edge_device pi@raspberrypi.local:~/pi-docker
+pi@raspberrypi.local's password: 
+docker-compose.yaml                                                                                100%  731   488.6KB/s   00:00    
+requirements.txt                                                                                   100%   31    51.8KB/s   00:00    
+Dockerfile                                                                                         100%  151   285.8KB/s   00:00    
+helper.cpython-313.pyc                                                                             100% 7803    12.1MB/s   00:00    
+helper.py                                                                                          100% 5488     8.7MB/s   00:00    
+app.py                                                                                             100%  886     1.8MB/s   00:00    
+jakubklas@Jakubs-MacBook-Pro myapp-docker % ssh pi@raspberrypi.local                                     
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:14:53 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ ls
+Bookshelf  Desktop  Documents  Downloads  -e  Music  --name  -p  Pictures  pi-docker  postgres:13  Public  Templates  Videos
+pi@raspberrypi:~ $ cd pi-docker
+pi@raspberrypi:~/pi-docker $ ls
+containerd.io_1.6.28-1_arm64.deb                             edge_device               iptables_1.8.9-2_arm64.deb   repeater.tar
+docker-ce_25.0.3-1~debian.12~bookworm_arm64.deb              edge_device-edge_app.tar  libip6tc2_1.8.9-2_arm64.deb
+docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb          edge_device_postgres.tar  nginx-alpine.tar
+docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb  hello-world.tar           postgres.tar
+pi@raspberrypi:~/pi-docker $ ls -l
+total 447028
+-rw-r--r-- 1 pi pi  21316576 May 13 13:35 containerd.io_1.6.28-1_arm64.deb
+-rw-r--r-- 1 pi pi  14835880 May 13 13:35 docker-ce_25.0.3-1~debian.12~bookworm_arm64.deb
+-rw-r--r-- 1 pi pi  12410572 May 13 13:35 docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb
+-rw-r--r-- 1 pi pi  10456776 May 13 13:35 docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb
+drwxr-xr-x 3 pi pi      4096 May 13 17:20 edge_device
+-rw------- 1 pi pi  95704064 May 13 17:13 edge_device-edge_app.tar
+-rw------- 1 pi pi 105498624 May 13 17:14 edge_device_postgres.tar
+-rw------- 1 pi pi     25600 May 13 13:35 hello-world.tar
+-rw-r--r-- 1 pi pi    351736 May 13 13:35 iptables_1.8.9-2_arm64.deb
+-rw-r--r-- 1 pi pi     18736 May 13 13:35 libip6tc2_1.8.9-2_arm64.deb
+-rw------- 1 pi pi  22962176 May 13 13:35 nginx-alpine.tar
+-rw-r--r-- 1 pi pi 154593792 May 13 15:38 postgres.tar
+-rw-r--r-- 1 pi pi  19556352 May 13 14:09 repeater.tar
+pi@raspberrypi:~/pi-docker $ mkdir docker_installation
+pi@raspberrypi:~/pi-docker $ mv containerd.io_1.6.28-1_arm64.deb docker_installation
+pi@raspberrypi:~/pi-docker $ mv docker-ce_25.0.3-1~debian.12~bookworm_arm64.deb docker_installation
+pi@raspberrypi:~/pi-docker $ ls -l
+total 411720
+-rw-r--r-- 1 pi pi  12410572 May 13 13:35 docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb
+-rw-r--r-- 1 pi pi  10456776 May 13 13:35 docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb
+drwxr-xr-x 2 pi pi      4096 May 13 17:22 docker_installation
+drwxr-xr-x 3 pi pi      4096 May 13 17:20 edge_device
+-rw------- 1 pi pi  95704064 May 13 17:13 edge_device-edge_app.tar
+-rw------- 1 pi pi 105498624 May 13 17:14 edge_device_postgres.tar
+-rw------- 1 pi pi     25600 May 13 13:35 hello-world.tar
+-rw-r--r-- 1 pi pi    351736 May 13 13:35 iptables_1.8.9-2_arm64.deb
+-rw-r--r-- 1 pi pi     18736 May 13 13:35 libip6tc2_1.8.9-2_arm64.deb
+-rw------- 1 pi pi  22962176 May 13 13:35 nginx-alpine.tar
+-rw-r--r-- 1 pi pi 154593792 May 13 15:38 postgres.tar
+-rw-r--r-- 1 pi pi  19556352 May 13 14:09 repeater.tar
+pi@raspberrypi:~/pi-docker $ mv docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb docker_installation
+pi@raspberrypi:~/pi-docker $ mv docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb docker_installation
+pi@raspberrypi:~/pi-docker $ sudo rm edge_device-edge_app.tar && rm edge_device_postgres.tar & rm hello-world.tar
+[1] 2399
+pi@raspberrypi:~/pi-docker $ sudo rm hello-world.tar
+rm: cannot remove 'hello-world.tar': No such file or directory
+[1]+  Done                    sudo rm edge_device-edge_app.tar && rm edge_device_postgres.tar
+pi@raspberrypi:~/pi-docker $ ls -l
+total 192868
+drwxr-xr-x 2 pi pi      4096 May 13 17:23 docker_installation
+drwxr-xr-x 3 pi pi      4096 May 13 17:20 edge_device
+-rw-r--r-- 1 pi pi    351736 May 13 13:35 iptables_1.8.9-2_arm64.deb
+-rw-r--r-- 1 pi pi     18736 May 13 13:35 libip6tc2_1.8.9-2_arm64.deb
+-rw------- 1 pi pi  22962176 May 13 13:35 nginx-alpine.tar
+-rw-r--r-- 1 pi pi 154593792 May 13 15:38 postgres.tar
+-rw-r--r-- 1 pi pi  19556352 May 13 14:09 repeater.tar
+pi@raspberrypi:~/pi-docker $ cd edge_device
+pi@raspberrypi:~/pi-docker/edge_device $ ls
+app.py  docker-compose.yaml  Dockerfile  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ docker-compose up
+-bash: docker-compose: command not found
+pi@raspberrypi:~/pi-docker/edge_device $ docker compose up
+[+] Building 10.3s (2/2) FINISHED                                                                                     docker:default
+ => [edge_app internal] load build definition from Dockerfile                                                                   0.1s
+ => => transferring dockerfile: 190B                                                                                            0.0s
+ => ERROR [edge_app internal] load metadata for docker.io/library/python:3.9-alpine                                            10.0s
+------
+ > [edge_app internal] load metadata for docker.io/library/python:3.9-alpine:
+------
+failed to solve: python:3.9-alpine: failed to do request: Head "https://registry-1.docker.io/v2/library/python/manifests/3.9-alpine": dial tcp: lookup registry-1.docker.io on 192.168.0.1:53: read udp 192.168.0.16:52145->192.168.0.1:53: i/o timeout
+pi@raspberrypi:~/pi-docker/edge_device $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/edge_device $ exit 
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro myapp-docker % ls
+edge_device	mac_server	readings	sensors
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp -r sensors pi@raspberrypi.local:~/pi-docker
+pi@raspberrypi.local's password: 
+docker-compose.yaml                                                                                100%  355   408.3KB/s   00:00    
+Dockerfile                                                                                         100%  104   166.0KB/s   00:00    
+app.py                                                                                             100%  545   842.1KB/s   00:00    
+jakubklas@Jakubs-MacBook-Pro myapp-docker % ssh pi@raspberrypi.local                       
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:21:02 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ cd pi-docker
+pi@raspberrypi:~/pi-docker $ ls -l
+total 192872
+drwxr-xr-x 2 pi pi      4096 May 13 17:23 docker_installation
+drwxr-xr-x 3 pi pi      4096 May 13 17:29 edge_device
+-rw-r--r-- 1 pi pi    351736 May 13 13:35 iptables_1.8.9-2_arm64.deb
+-rw-r--r-- 1 pi pi     18736 May 13 13:35 libip6tc2_1.8.9-2_arm64.deb
+-rw------- 1 pi pi  22962176 May 13 13:35 nginx-alpine.tar
+-rw-r--r-- 1 pi pi 154593792 May 13 15:38 postgres.tar
+-rw-r--r-- 1 pi pi  19556352 May 13 14:09 repeater.tar
+drwxr-xr-x 2 pi pi      4096 May 13 17:30 sensors
+pi@raspberrypi:~/pi-docker $ cd sensors
+pi@raspberrypi:~/pi-docker/sensors $ ls 
+app.py  docker-compose.yaml  Dockerfile
+pi@raspberrypi:~/pi-docker/sensors $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker images
+REPOSITORY                                                  TAG          IMAGE ID       CREATED        SIZE
+edge_device-edge_app                                        latest       410eedb16442   27 hours ago   351MB
+mac_server-mac_server_app                                   latest       ec6314ab8106   28 hours ago   141MB
+edge_device                                                 latest       008bcfdd0e2a   3 days ago     351MB
+sensors-thermometer                                         latest       059a55839a34   4 days ago     81.5MB
+sensors-barometer                                           latest       4a8cc7ba84ea   4 days ago     81.5MB
+barometer                                                   latest       c7954528490b   4 days ago     81.5MB
+postgres                                                    13-alpine    28ba8bce3181   6 days ago     379MB
+repeater                                                    pi           a11c69bdbd97   8 days ago     81.5MB
+myapp                                                       pi_version   8f855d59e399   11 days ago    81.5MB
+postgres                                                    13           fb11a641ba92   2 weeks ago    641MB
+nginx                                                       alpine       42a516af16b8   6 weeks ago    80.2MB
+hello-world                                                 latest       54e66cc1dd1f   7 weeks ago    16.9kB
+estimator                                                   latest       22ff79d82c85   5 months ago   1.5GB
+591213504950.dkr.ecr.eu-west-2.amazonaws.com/ml_project     latest       4a4979f264e0   5 months ago   264MB
+ml_project                                                  latest       4a4979f264e0   5 months ago   264MB
+<none>                                                      <none>       5ee7a3e4353a   5 months ago   264MB
+<none>                                                      <none>       9b3dd6360200   5 months ago   921MB
+<none>                                                      <none>       d9fa8f95cdf7   5 months ago   921MB
+<none>                                                      <none>       47fc0a691055   5 months ago   592MB
+<none>                                                      <none>       503e09dfb1fd   5 months ago   592MB
+your-image-name                                             latest       ff2da8a71a50   5 months ago   592MB
+<none>                                                      <none>       75f44d972ba5   5 months ago   2.14GB
+<none>                                                      <none>       d74cf65da853   5 months ago   579MB
+<none>                                                      <none>       4d7515e3bdde   6 months ago   2.09GB
+<none>                                                      <none>       1d486e9e2a90   6 months ago   2.09GB
+591213504950.dkr.ecr.eu-west-2.amazonaws.com/test_project   latest       d4c1323b675b   6 months ago   1.72GB
+test_project                                                latest       d4c1323b675b   6 months ago   1.72GB
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker save -o sensors-thermometer.tar sensors-thermometer  
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker save -o sensors-barometer.tar sensors-barometer      
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp sensors-thermometer.tar sensors-barometer.tar pi@raspberrypi.local:~/pi-docker/sensors
+pi@raspberrypi.local's password: 
+sensors-thermometer.tar                                                                            100%   19MB 106.5MB/s   00:00    
+sensors-barometer.tar                                                                              100%   19MB 108.2MB/s   00:00    
+jakubklas@Jakubs-MacBook-Pro myapp-docker % ssh pi@raspberrypi.local                                    
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:30:53 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ cd pi-docker/sensors
+pi@raspberrypi:~/pi-docker/sensors $ ls
+app.py  docker-compose.yaml  Dockerfile  sensors-barometer.tar  sensors-thermometer.tar
+pi@raspberrypi:~/pi-docker/sensors $ docker load sensors-barometer.tar
+"docker load" accepts no arguments.
+See 'docker load --help'.
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+pi@raspberrypi:~/pi-docker/sensors $ dovker load -i sensors-barometer.tar
+-bash: dovker: command not found
+pi@raspberrypi:~/pi-docker/sensors $ docker load -i sensors-barometer.tar
+b2db508d00fb: Loading layer [==================================================>]     436B/436B
+fd214465ddd7: Loading layer [==================================================>]     119B/119B
+Loaded image: sensors-barometer:latest
+pi@raspberrypi:~/pi-docker/sensors $ docker load -i sensors-thermometer.tar
+Loaded image: sensors-thermometer:latest
+pi@raspberrypi:~/pi-docker/sensors $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/sensors $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+nginx                 alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world           latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/sensors $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/sensors $ docker compose up
+[+] Running 3/3
+ ✔ Network sensors_default  Created                                                                                             0.1s 
+ ✔ Container barometer      Created                                                                                             0.2s 
+ ✔ Container thermometer    Created                                                                                             0.2s 
+Attaching to barometer, thermometer
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 2/2
+ ✔ Container thermometer  Stopped                                                                                              10.4s 
+ ✔ Container barometer    Stopped                                                                                              10.4s 
+canceled
+pi@raspberrypi:~/pi-docker/sensors $ docker compose up
+[+] Running 2/0
+ ✔ Container barometer    Created                                                                                               0.0s 
+ ✔ Container thermometer  Created                                                                                               0.0s 
+Attaching to barometer, thermometer
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 0/2
+ ⠇ Container thermometer  Stopping                                                                                              4.9s 
+ ⠇ Container barometer    Stopping                                                                                              4.9s 
+[+] Stopping 2/2
+ ✔ Container thermometer  Stopped                                                                                               5.2s 
+ ✔ Container barometer    Stopped                                                                                               5.1s 
+canceled
+pi@raspberrypi:~/pi-docker/sensors $ docker compose up -d
+[+] Running 2/2
+ ✔ Container barometer    Started                                                                                               0.0s 
+ ✔ Container thermometer  Started                                                                                               0.0s 
+pi@raspberrypi:~/pi-docker/sensors $ docker ps
+CONTAINER ID   IMAGE                        COMMAND            CREATED              STATUS          PORTS     NAMES
+527032eb1f2e   sensors-thermometer:latest   "python3 app.py"   About a minute ago   Up 4 seconds              thermometer
+21bdb3a32fd1   sensors-barometer:latest     "python3 app.py"   About a minute ago   Up 4 seconds              barometer
+4e13043a2dd4   repeater:pi                  "python3 app.py"   31 minutes ago       Up 31 minutes             repeater
+pi@raspberrypi:~/pi-docker/sensors $ docker stop repeater
+repeater
+pi@raspberrypi:~/pi-docker/sensors $ cd ..
+pi@raspberrypi:~/pi-docker $ ls
+docker_installation  iptables_1.8.9-2_arm64.deb   nginx-alpine.tar  repeater.tar
+edge_device          libip6tc2_1.8.9-2_arm64.deb  postgres.tar      sensors
+pi@raspberrypi:~/pi-docker $ rm repeater.tar postgres.tar
+pi@raspberrypi:~/pi-docker $ ls
+docker_installation  edge_device  iptables_1.8.9-2_arm64.deb  libip6tc2_1.8.9-2_arm64.deb  nginx-alpine.tar  sensors
+pi@raspberrypi:~/pi-docker $ rm nginx-alpine.tar 
+pi@raspberrypi:~/pi-docker $ mv iptables_1.8.9-2_arm64.deb libip6tc2_1.8.9-2_arm64.deb docker_installation
+pi@raspberrypi:~/pi-docker $ ls
+docker_installation  edge_device  sensors
+pi@raspberrypi:~/pi-docker $ docker ps
+CONTAINER ID   IMAGE                        COMMAND            CREATED              STATUS              PORTS     NAMES
+67d1ee13bced   repeater:pi                  "python3 app.py"   About a minute ago   Up About a minute             repeater
+527032eb1f2e   sensors-thermometer:latest   "python3 app.py"   3 minutes ago        Up About a minute             thermometer
+21bdb3a32fd1   sensors-barometer:latest     "python3 app.py"   3 minutes ago        Up About a minute             barometer
+pi@raspberrypi:~/pi-docker $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+nginx                 alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world           latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker $ cd edge_device
+pi@raspberrypi:~/pi-docker/edge_device $ ls
+app.py  docker-compose.yaml  Dockerfile  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ cd .. && cd docker_installation && ls -l
+total 58008
+-rw-r--r-- 1 pi pi 21316576 May 13 13:35 containerd.io_1.6.28-1_arm64.deb
+-rw-r--r-- 1 pi pi 14835880 May 13 13:35 docker-ce_25.0.3-1~debian.12~bookworm_arm64.deb
+-rw-r--r-- 1 pi pi 12410572 May 13 13:35 docker-ce-cli_25.0.3-1~debian.12~bookworm_arm64.deb
+-rw-r--r-- 1 pi pi 10456776 May 13 13:35 docker-compose-plugin_2.24.6-1~debian.12~bookworm_arm64.deb
+-rw-r--r-- 1 pi pi   351736 May 13 13:35 iptables_1.8.9-2_arm64.deb
+-rw-r--r-- 1 pi pi    18736 May 13 13:35 libip6tc2_1.8.9-2_arm64.deb
+pi@raspberrypi:~/pi-docker/docker_installation $ cd ..
+pi@raspberrypi:~/pi-docker $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker images
+REPOSITORY                                                  TAG          IMAGE ID       CREATED        SIZE
+edge_device-edge_app                                        latest       410eedb16442   28 hours ago   351MB
+mac_server-mac_server_app                                   latest       ec6314ab8106   28 hours ago   141MB
+edge_device                                                 latest       008bcfdd0e2a   3 days ago     351MB
+sensors-thermometer                                         latest       059a55839a34   4 days ago     81.5MB
+sensors-barometer                                           latest       4a8cc7ba84ea   4 days ago     81.5MB
+barometer                                                   latest       c7954528490b   4 days ago     81.5MB
+postgres                                                    13-alpine    28ba8bce3181   6 days ago     379MB
+repeater                                                    pi           a11c69bdbd97   8 days ago     81.5MB
+myapp                                                       pi_version   8f855d59e399   11 days ago    81.5MB
+postgres                                                    13           fb11a641ba92   2 weeks ago    641MB
+nginx                                                       alpine       42a516af16b8   6 weeks ago    80.2MB
+hello-world                                                 latest       54e66cc1dd1f   7 weeks ago    16.9kB
+estimator                                                   latest       22ff79d82c85   5 months ago   1.5GB
+591213504950.dkr.ecr.eu-west-2.amazonaws.com/ml_project     latest       4a4979f264e0   5 months ago   264MB
+ml_project                                                  latest       4a4979f264e0   5 months ago   264MB
+<none>                                                      <none>       5ee7a3e4353a   5 months ago   264MB
+<none>                                                      <none>       9b3dd6360200   5 months ago   921MB
+<none>                                                      <none>       d9fa8f95cdf7   5 months ago   921MB
+<none>                                                      <none>       47fc0a691055   5 months ago   592MB
+<none>                                                      <none>       503e09dfb1fd   5 months ago   592MB
+your-image-name                                             latest       ff2da8a71a50   5 months ago   592MB
+<none>                                                      <none>       75f44d972ba5   5 months ago   2.14GB
+<none>                                                      <none>       d74cf65da853   5 months ago   579MB
+<none>                                                      <none>       4d7515e3bdde   6 months ago   2.09GB
+<none>                                                      <none>       1d486e9e2a90   6 months ago   2.09GB
+591213504950.dkr.ecr.eu-west-2.amazonaws.com/test_project   latest       d4c1323b675b   6 months ago   1.72GB
+test_project                                                latest       d4c1323b675b   6 months ago   1.72GB
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker save -o edge_app.tar edge_device-edge_app:latest
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker save -o edge_postgres.tar postgres:13-alpine    
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_app.tar edge_postgres.tar pi@rasberrypi:~/pi-docker/edge_device/
+ssh: Could not resolve hostname rasberrypi: nodename nor servname provided, or not known
+scp: Connection closed
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_app.tar edge_postgres.tar pi@rasberrypi.local:~/pi-docker/edge_device/ 
+^C%                                                                                                                                  jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_app.tar edge_postgres.tar pi@rasberrypi.local:~/pi-docker/edge_device 
+^C%                                                                                                                                  jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_app.tar  pi@rasberrypi.local:~/pi-docker/edge_device
+^C%                                                                                                                                  jakubklas@Jakubs-MacBook-Pro myapp-docker % ssh pi@raspberrypi.local
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:37:16 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ exit
+logout
+Connection to raspberrypi.local closed.
+jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_app.tar edge_postgres.tar pi@rasberrypi.local:~/pi-docker/edge_device
+^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^C%                                                                                          jakubklas@Jakubs-MacBook-Pro myapp-docker % scp edge_app.tar edge_postgres.tar pi@raspberrypi.local:~/pi-docker/edge_device
+pi@raspberrypi.local's password: 
+edge_app.tar                                                                                       100%   91MB 109.2MB/s   00:00    
+edge_postgres.tar                                                                                  100%  101MB 110.2MB/s   00:00    
+jakubklas@Jakubs-MacBook-Pro myapp-docker % ssh pi@raspberrypi.local                                                      
+pi@raspberrypi.local's password: 
+Linux raspberrypi 6.12.25+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue May 13 17:49:03 2025 from fe80::4a1:7a2:6915:110b%eth0
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+pi@raspberrypi:~ $ cd pi-docker/edge_device
+pi@raspberrypi:~/pi-docker/edge_device $ ls
+app.py  docker-compose.yaml  Dockerfile  edge_app.tar  edge_postgres.tar  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ docker load -i edge_app.tar edge_postgres.tar
+"docker load" accepts no arguments.
+See 'docker load --help'.
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+pi@raspberrypi:~/pi-docker/edge_device $ docker load --helop
+unknown flag: --helop
+See 'docker load --help'.
+pi@raspberrypi:~/pi-docker/edge_device $ docker load --help
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+
+Aliases:
+  docker image load, docker load
+
+Options:
+  -i, --input string   Read from tar archive file, instead of STDIN
+  -q, --quiet          Suppress the load output
+pi@raspberrypi:~/pi-docker/edge_device $ docker load -i edge_app.tar
+c89a9fe4b93d: Loading layer [==================================================>]     173B/173B
+acf5f518685b: Loading layer [==================================================>]  76.14MB/76.14MB
+e6b5818051d1: Loading layer [==================================================>]  2.107kB/2.107kB
+Loaded image: edge_device-edge_app:latest
+pi@raspberrypi:~/pi-docker/edge_device $ docker load -i edge_postgres.tar
+Loaded image: postgres:13-alpine
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY             TAG         IMAGE ID       CREATED                  SIZE
+edge_device-edge_app   latest      c73af3ba4759   Less than a second ago   228MB
+sensors-barometer      latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer    latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres               13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater               pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres               13          e32bda23c455   Less than a second ago   461MB
+nginx                  alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world            latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/edge_device $ docker --help | grep remove
+pi@raspberrypi:~/pi-docker/edge_device $ docker --help
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.11.1)
+  compose*    Docker Compose (Docker Inc., v2.24.6)
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/home/pi/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default
+                           context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/pi/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/pi/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/pi/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+pi@raspberrypi:~/pi-docker/edge_device $ docker rename edge_device-edge_app edge_app
+Error response from daemon: No such container: edge_device-edge_app
+Error: failed to rename container named edge_device-edge_app
+pi@raspberrypi:~/pi-docker/edge_device $ docker rename edge_device-edge_app:latest edge_app:latest
+Error response from daemon: No such container: edge_device-edge_app:latest
+Error: failed to rename container named edge_device-edge_app:latest
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY             TAG         IMAGE ID       CREATED                  SIZE
+edge_device-edge_app   latest      c73af3ba4759   Less than a second ago   228MB
+sensors-barometer      latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer    latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres               13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater               pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres               13          e32bda23c455   Less than a second ago   461MB
+nginx                  alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world            latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/edge_device $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/edge_device $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/edge_device $ docker compose up
+unable to get image 'postgres:13-alpine:latest': Error response from daemon: invalid reference format
+pi@raspberrypi:~/pi-docker/edge_device $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/edge_device $ docker compose up
+[+] Running 4/4
+ ✔ Network edge_device_edge_network    Created                                                                                  0.1s 
+ ✔ Volume "edge_device_postgres_data"  Created                                                                                  0.0s 
+ ✔ Container edge_postgres             Created                                                                                  0.1s 
+ ✔ Container edge_application          Created                                                                                  0.1s 
+Attaching to edge_application, edge_postgres
+edge_postgres     | The files belonging to this database system will be owned by user "postgres".
+edge_postgres     | This user must also own the server process.
+edge_postgres     | 
+edge_postgres     | The database cluster will be initialized with locale "en_US.utf8".
+edge_postgres     | The default text search configuration will be set to "english".
+edge_postgres     | 
+edge_postgres     | Data page checksums are disabled.
+edge_postgres     | 
+edge_postgres     | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+edge_postgres     | creating subdirectories ... ok
+edge_postgres     | selecting dynamic shared memory implementation ... posix
+edge_postgres     | selecting default max_connections ... 100
+edge_postgres     | selecting default shared_buffers ... 128MB
+edge_postgres     | selecting default time zone ... UTC
+edge_postgres     | creating configuration files ... ok
+edge_postgres     | running bootstrap script ... ok
+edge_postgres     | sh: locale: not found
+edge_postgres     | 2025-05-13 16:57:05.851 UTC [35] WARNING:  no usable system locales were found
+edge_postgres     | performing post-bootstrap initialization ... ok
+edge_postgres     | initdb: warning: enabling "trust" authentication for local connections
+edge_postgres     | You can change this by editing pg_hba.conf or using the option -A, or
+edge_postgres     | --auth-local and --auth-host, the next time you run initdb.
+edge_postgres     | syncing data to disk ... ok
+edge_postgres     | 
+edge_postgres     | 
+edge_postgres     | Success. You can now start the database server using:
+edge_postgres     | 
+edge_postgres     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+edge_postgres     | 
+edge_application  | Failed to check table existence due to: connection to server at "postgres" (172.19.0.2), port 5432 failed: Connection refused
+edge_application  | 	Is the server running on that host and accepting TCP/IP connections?
+edge_application  | 
+edge_application  | Table failed to create due to connection to server at "postgres" (172.19.0.2), port 5432 failed: Connection refused
+edge_application  | 	Is the server running on that host and accepting TCP/IP connections?
+edge_application  | 
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 33, in main
+edge_application  |     helper.create_table()
+edge_application  |   File "/app/helper.py", line 73, in create_table
+edge_application  |     raise e
+edge_application  |   File "/app/helper.py", line 56, in create_table
+edge_application  |     conn = self.connect_db()
+edge_application  |   File "/app/helper.py", line 18, in connect_db
+edge_application  |     return psycopg2.connect(
+edge_application  |   File "/usr/local/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+edge_application  |     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+edge_application  | psycopg2.OperationalError: connection to server at "postgres" (172.19.0.2), port 5432 failed: Connection refused
+edge_application  | 	Is the server running on that host and accepting TCP/IP connections?
+edge_application  | 
+edge_postgres     | waiting for server to start....2025-05-13 16:57:07.736 UTC [41] LOG:  starting PostgreSQL 13.22 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+edge_postgres     | 2025-05-13 16:57:07.749 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+edge_postgres     | 2025-05-13 16:57:07.764 UTC [42] LOG:  database system was shut down at 2025-05-13 16:57:06 UTC
+edge_postgres     | 2025-05-13 16:57:07.775 UTC [41] LOG:  database system is ready to accept connections
+edge_postgres     |  done
+edge_postgres     | server started
+edge_postgres     | CREATE DATABASE
+edge_postgres     | 
+edge_postgres     | 
+edge_postgres     | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+edge_postgres     | 
+edge_postgres     | waiting for server to shut down....2025-05-13 16:57:08.191 UTC [41] LOG:  received fast shutdown request
+edge_postgres     | 2025-05-13 16:57:08.199 UTC [41] LOG:  aborting any active transactions
+edge_postgres     | 2025-05-13 16:57:08.202 UTC [41] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+edge_postgres     | 2025-05-13 16:57:08.202 UTC [43] LOG:  shutting down
+edge_postgres     | 2025-05-13 16:57:08.335 UTC [41] LOG:  database system is shut down
+edge_postgres     |  done
+edge_postgres     | server stopped
+edge_postgres     | 
+edge_postgres     | PostgreSQL init process complete; ready for start up.
+edge_postgres     | 
+edge_postgres     | 2025-05-13 16:57:08.444 UTC [1] LOG:  starting PostgreSQL 13.22 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+edge_postgres     | 2025-05-13 16:57:08.444 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+edge_postgres     | 2025-05-13 16:57:08.444 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+edge_postgres     | 2025-05-13 16:57:08.470 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+edge_postgres     | 2025-05-13 16:57:08.499 UTC [56] LOG:  database system was shut down at 2025-05-13 16:57:08 UTC
+edge_postgres     | 2025-05-13 16:57:08.514 UTC [1] LOG:  database system is ready to accept connections
+edge_application exited with code 0
+edge_application  | []
+edge_application  | []
+edge_application  | []
+edge_application  | []
+edge_application  | []
+^Xedge_application  | []
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 0/1
+ ⠦ Container edge_application  Stopping                                                                                         8.7s 
+[+] Killing 2/2
+[+] Stopping 2/2e_postgres     Killed                                                                                           0.4s 
+ ✔ Container edge_application  Stopped                                                                                          8.9s 
+ ✔ Container edge_postgres     Stopped                                                                                          0.1s 
+canceled
+pi@raspberrypi:~/pi-docker/edge_device $ ls
+app.py  docker-compose.yaml  Dockerfile  edge_app.tar  edge_postgres.tar  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ ls -l
+total 196528
+-rw-r--r-- 1 pi pi       886 May 13 17:20 app.py
+-rw-r--r-- 1 pi pi       758 May 13 17:57 docker-compose.yaml
+-rw-r--r-- 1 pi pi       151 May 13 17:20 Dockerfile
+-rw------- 1 pi pi  95703552 May 13 18:03 edge_app.tar
+-rw------- 1 pi pi 105498624 May 13 17:50 edge_postgres.tar
+-rw-r--r-- 1 pi pi      5488 May 13 17:20 helper.py
+drwxr-xr-x 2 pi pi      4096 May 13 17:20 __pycache__
+-rw-r--r-- 1 pi pi        31 May 13 17:20 requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ ls -l
+total 196528
+-rw-r--r-- 1 pi pi       886 May 13 17:20 app.py
+-rw-r--r-- 1 pi pi       758 May 13 17:57 docker-compose.yaml
+-rw-r--r-- 1 pi pi       151 May 13 17:20 Dockerfile
+-rw------- 1 pi pi  95703552 May 13 18:03 edge_app.tar
+-rw------- 1 pi pi 105498624 May 13 17:50 edge_postgres.tar
+-rw-r--r-- 1 pi pi      5488 May 13 17:20 helper.py
+drwxr-xr-x 2 pi pi      4096 May 13 17:20 __pycache__
+-rw-r--r-- 1 pi pi        31 May 13 17:20 requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ rm edge_app.tar
+pi@raspberrypi:~/pi-docker/edge_device $ ls -l
+total 103060
+-rw-r--r-- 1 pi pi       886 May 13 17:20 app.py
+-rw-r--r-- 1 pi pi       758 May 13 17:57 docker-compose.yaml
+-rw-r--r-- 1 pi pi       151 May 13 17:20 Dockerfile
+-rw------- 1 pi pi 105498624 May 13 17:50 edge_postgres.tar
+-rw-r--r-- 1 pi pi      5488 May 13 17:20 helper.py
+drwxr-xr-x 2 pi pi      4096 May 13 17:20 __pycache__
+-rw-r--r-- 1 pi pi        31 May 13 17:20 requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ ls -l
+total 196524
+-rw-r--r-- 1 pi pi       886 May 13 17:20 app.py
+-rw-r--r-- 1 pi pi       758 May 13 17:57 docker-compose.yaml
+-rw-r--r-- 1 pi pi       151 May 13 17:20 Dockerfile
+-rw------- 1 pi pi  95703552 May 13 18:05 edge_app.tar
+-rw------- 1 pi pi 105498624 May 13 17:50 edge_postgres.tar
+-rw-r--r-- 1 pi pi      5488 May 13 17:20 helper.py
+drwxr-xr-x 2 pi pi      4096 May 13 17:20 __pycache__
+-rw-r--r-- 1 pi pi        31 May 13 17:20 requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY             TAG         IMAGE ID       CREATED                  SIZE
+edge_device-edge_app   latest      c73af3ba4759   Less than a second ago   228MB
+sensors-barometer      latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer    latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres               13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater               pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres               13          e32bda23c455   Less than a second ago   461MB
+nginx                  alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world            latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/edge_device $ docker rm repeater
+Error response from daemon: cannot remove container "/repeater": container is running: stop the container before removing or force remove
+pi@raspberrypi:~/pi-docker/edge_device $ docker rm edge_device-edge_app
+Error response from daemon: No such container: edge_device-edge_app
+pi@raspberrypi:~/pi-docker/edge_device $ docker rm edge_device-edge_app:latest
+Error response from daemon: No such container: edge_device-edge_app:latest
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY             TAG         IMAGE ID       CREATED                  SIZE
+edge_device-edge_app   latest      c73af3ba4759   Less than a second ago   228MB
+sensors-barometer      latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer    latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres               13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater               pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres               13          e32bda23c455   Less than a second ago   461MB
+nginx                  alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world            latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/edge_device $ docker load edge_app.tar
+"docker load" accepts no arguments.
+See 'docker load --help'.
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+pi@raspberrypi:~/pi-docker/edge_device $ docker load -i edge_app.tar
+6620f1d97490: Loading layer [==================================================>]  2.117kB/2.117kB
+Loaded image: edge_app:pi
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY             TAG         IMAGE ID       CREATED                  SIZE
+edge_app               pi          cfbdb211a4e5   Less than a second ago   228MB
+edge_device-edge_app   latest      c73af3ba4759   Less than a second ago   228MB
+sensors-barometer      latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer    latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres               13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater               pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres               13          e32bda23c455   Less than a second ago   461MB
+nginx                  alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world            latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/edge_device $ docker remove c73af3ba4759
+Error response from daemon: No such container: c73af3ba4759
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi edge_device-edge_app:latest
+Error response from daemon: conflict: unable to remove repository reference "edge_device-edge_app:latest" (must force) - container d1f5c426b767 is using its referenced image c73af3ba4759
+pi@raspberrypi:~/pi-docker/edge_device $ docker stop edge_device-edge_app   latest
+Error response from daemon: No such container: edge_device-edge_app
+Error response from daemon: No such container: latest
+pi@raspberrypi:~/pi-docker/edge_device $ docker stop edge_device-edge_app
+Error response from daemon: No such container: edge_device-edge_app
+pi@raspberrypi:~/pi-docker/edge_device $ docker ps
+CONTAINER ID   IMAGE                        COMMAND            CREATED          STATUS          PORTS     NAMES
+67d1ee13bced   repeater:pi                  "python3 app.py"   26 minutes ago   Up 26 minutes             repeater
+527032eb1f2e   sensors-thermometer:latest   "python3 app.py"   28 minutes ago   Up 27 minutes             thermometer
+21bdb3a32fd1   sensors-barometer:latest     "python3 app.py"   28 minutes ago   Up 27 minutes             barometer
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi -f edge_device-edge_app:latest
+Untagged: edge_device-edge_app:latest
+Deleted: sha256:c73af3ba4759e9dc00779734ee56df6fb1274b0015eb829ffec0f85ee704f36e
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+edge_app              pi          cfbdb211a4e5   Less than a second ago   228MB
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+nginx                 alpine      35f3cbee4fb7   Less than a second ago   52.9MB
+hello-world           latest      ca9905c726f0   Less than a second ago   5.2kB
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi -f nginx
+Error response from daemon: No such image: nginx:latest
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi -f nginx:alpine
+Untagged: nginx:alpine
+Deleted: sha256:35f3cbee4fb77c3efb39f2723a21ce181906139442a37de8ffc52d89641d9936
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi -f hello-world:latest
+Untagged: hello-world:latest
+Deleted: sha256:ca9905c726f06de3cb54aaa54d4d1eade5403594e3fbfb050ccc970fd0212983
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+edge_app              pi          cfbdb211a4e5   Less than a second ago   228MB
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+pi@raspberrypi:~/pi-docker/edge_device $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/edge_device $ docker compose up
+[+] Running 2/2
+ ✔ Container edge_postgres     Created                                                                                          0.0s 
+ ✔ Container edge_application  Recreated                                                                                        0.2s 
+Attaching to edge_application, edge_postgres
+edge_postgres     | 
+edge_postgres     | PostgreSQL Database directory appears to contain a database; Skipping initialization
+edge_postgres     | 
+edge_postgres     | 2025-05-13 17:11:35.812 UTC [1] LOG:  starting PostgreSQL 13.22 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+edge_postgres     | 2025-05-13 17:11:35.812 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+edge_postgres     | 2025-05-13 17:11:35.812 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+edge_postgres     | 2025-05-13 17:11:35.833 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+edge_postgres     | 2025-05-13 17:11:35.860 UTC [27] LOG:  database system was interrupted; last known up at 2025-05-13 16:57:08 UTC
+edge_postgres     | 2025-05-13 17:11:35.897 UTC [27] LOG:  database system was not properly shut down; automatic recovery in progress
+edge_postgres     | 2025-05-13 17:11:35.905 UTC [27] LOG:  redo starts at 0/15DD7B0
+edge_postgres     | 2025-05-13 17:11:35.906 UTC [27] LOG:  invalid record length at 0/15F6C78: wanted 24, got 0
+edge_postgres     | 2025-05-13 17:11:35.906 UTC [27] LOG:  redo done at 0/15F6C40
+edge_postgres     | 2025-05-13 17:11:36.004 UTC [1] LOG:  database system is ready to accept connections
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 108, in poll
+edge_application  |     for file in os.listdir(self.path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '~/pi-docker/sensors'
+edge_application exited with code 0
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 108, in poll
+edge_application  |     for file in os.listdir(self.path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '~/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 108, in poll
+edge_application  |     for file in os.listdir(self.path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '~/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 108, in poll
+edge_application  |     for file in os.listdir(self.path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '~/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 108, in poll
+edge_application  |     for file in os.listdir(self.path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '~/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 108, in poll
+edge_application  |     for file in os.listdir(self.path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '~/pi-docker/sensors'
+edge_application exited with code 1
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 2/2
+ ✔ Container edge_application  Stopped                                                                                          0.0s 
+ ✔ Container edge_postgres     Stopped                                                                                          0.3s 
+canceled
+pi@raspberrypi:~/pi-docker/edge_device $ cd ..
+pi@raspberrypi:~/pi-docker $ ls
+docker_installation  edge_device  sensors
+pi@raspberrypi:~/pi-docker $ cd sensors
+pi@raspberrypi:~/pi-docker/sensors $ ls
+app.py  barometer.json  docker-compose.yaml  Dockerfile  sensors-barometer.tar  sensors-thermometer.tar  thermometer.json
+pi@raspberrypi:~/pi-docker/sensors $ cd .
+pi@raspberrypi:~/pi-docker/sensors $ cd ..
+pi@raspberrypi:~/pi-docker $ cd edge_devoce
+-bash: cd: edge_devoce: No such file or directory
+pi@raspberrypi:~/pi-docker $ cd edge_device
+pi@raspberrypi:~/pi-docker/edge_device $ ls
+app.py  docker-compose.yaml  Dockerfile  edge_app.tar  edge_postgres.tar  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ rm edge_app.tar
+pi@raspberrypi:~/pi-docker/edge_device $ ls 
+app.py  docker-compose.yaml  Dockerfile  edge_postgres.tar  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ ls
+app.py  docker-compose.yaml  Dockerfile  edge_app.tar  edge_postgres.tar  helper.py  __pycache__  requirements.txt
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+edge_app              pi          cfbdb211a4e5   Less than a second ago   228MB
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi edge_app:pi
+Error response from daemon: conflict: unable to remove repository reference "edge_app:pi" (must force) - container 584c4acec355 is using its referenced image cfbdb211a4e5
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+edge_app              pi          cfbdb211a4e5   Less than a second ago   228MB
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+pi@raspberrypi:~/pi-docker/edge_device $ docker rmi -f edge_app:pi
+Untagged: edge_app:pi
+Deleted: sha256:cfbdb211a4e5b0c101f4e815d79974b67795b8e19a7bec5ac6f70ee77e873310
+pi@raspberrypi:~/pi-docker/edge_device $ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED                  SIZE
+sensors-barometer     latest      d084d06d0e5a   Less than a second ago   54.1MB
+sensors-thermometer   latest      ffa942d591d2   Less than a second ago   54.1MB
+postgres              13-alpine   94de5a465a54   Less than a second ago   266MB
+repeater              pi          596c5da6cc6e   Less than a second ago   54.1MB
+postgres              13          e32bda23c455   Less than a second ago   461MB
+pi@raspberrypi:~/pi-docker/edge_device $ docker load edge_app.tar
+"docker load" accepts no arguments.
+See 'docker load --help'.
+
+Usage:  docker load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+pi@raspberrypi:~/pi-docker/edge_device $ docker load -i edge_app.py
+open edge_app.py: no such file or directory
+pi@raspberrypi:~/pi-docker/edge_device $ docker load -i edge_app.tar
+47f172b4f891: Loading layer [==================================================>]  2.134kB/2.134kB
+Loaded image: edge_app:pi
+pi@raspberrypi:~/pi-docker/edge_device $ nano docker-compose.yaml
+pi@raspberrypi:~/pi-docker/edge_device $ docker compose up
+[+] Running 2/2
+ ✔ Container edge_postgres     Created                                                                                          0.0s 
+ ✔ Container edge_application  Recreated                                                                                        0.2s 
+Attaching to edge_application, edge_postgres
+edge_postgres     | 
+edge_postgres     | PostgreSQL Database directory appears to contain a database; Skipping initialization
+edge_postgres     | 
+edge_postgres     | 2025-05-13 17:21:20.514 UTC [1] LOG:  starting PostgreSQL 13.22 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+edge_postgres     | 2025-05-13 17:21:20.514 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+edge_postgres     | 2025-05-13 17:21:20.514 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+edge_postgres     | 2025-05-13 17:21:20.532 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+edge_postgres     | 2025-05-13 17:21:20.550 UTC [27] LOG:  database system was shut down at 2025-05-13 17:11:47 UTC
+edge_postgres     | 2025-05-13 17:21:20.570 UTC [1] LOG:  database system is ready to accept connections
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 109, in poll
+edge_application  |     for file in os.listdir(expanded_path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '/root/pi-docker/sensors'
+edge_application exited with code 0
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 109, in poll
+edge_application  |     for file in os.listdir(expanded_path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '/root/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 109, in poll
+edge_application  |     for file in os.listdir(expanded_path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '/root/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 109, in poll
+edge_application  |     for file in os.listdir(expanded_path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '/root/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 109, in poll
+edge_application  |     for file in os.listdir(expanded_path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '/root/pi-docker/sensors'
+edge_application exited with code 1
+edge_application  | Traceback (most recent call last):
+edge_application  |   File "/app/app.py", line 50, in <module>
+edge_application  |     main()
+edge_application  |   File "/app/app.py", line 37, in main
+edge_application  |     helper.poll()
+edge_application  |   File "/app/helper.py", line 109, in poll
+edge_application  |     for file in os.listdir(expanded_path):
+edge_application  | FileNotFoundError: [Errno 2] No such file or directory: '/root/pi-docker/sensors'
+edge_application exited with code 1
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 2/2
+ ✔ Container edge_application  Stopped                                                                                          0.0s 
+ ✔ Container edge_postgres     Stopped                                                                                          0.3s 
+canceled
+pi@raspberrypi:~/pi-docker/edge_device $ Read from remote host raspberrypi.local: No route to host
+Connection to raspberrypi.local closed.
+client_loop: send disconnect: Broken pipe
+jakubklas@Jakubs-MacBook-Pro myapp-docker % 
+  [Restored 6 Oct 2025 at 17:45:17]
+Last login: Mon Oct  6 17:45:08 on console
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker --version
+Docker version 28.0.1, build 068a01e
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker ps
+Cannot connect to the Docker daemon at unix:///Users/jakubklas/.docker/run/docker.sock. Is the docker daemon running?
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker daemon
+docker: unknown command: docker daemon
+
+Run 'docker --help' for more information
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker --help
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Authenticate to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  ai*         Docker AI Agent - Ask Gordon
+  builder     Manage builds
+  buildx*     Docker Buildx
+  checkpoint  Manage checkpoints
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  debug*      Get a shell into any image or container
+  desktop*    Docker Desktop commands (Beta)
+  dev*        Docker Dev Environments
+  extension*  Manages Docker extensions
+  feedback*   Provide feedback, right in your terminal!
+  image       Manage images
+  init*       Creates Docker-related starter files for your project
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image
+  scout*      Docker Scout
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  config      Manage Swarm configs
+  node        Manage Swarm nodes
+  secret      Manage Swarm secrets
+  service     Manage Swarm services
+  stack       Manage Swarm stacks
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/Users/jakubklas/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default
+                           context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/jakubklas/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/jakubklas/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/jakubklas/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker ai* hey
+zsh: no matches found: ai*
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker ai*
+zsh: no matches found: ai*
+jakubklas@Jakubs-MacBook-Pro myapp-docker % docker builder
+Extended build capabilities with BuildKit
+
+Usage:  docker buildx [OPTIONS] COMMAND
+
+Extended build capabilities with BuildKit
+
+Options:
+      --builder string   Override the configured builder instance (default "desktop-linux")
+  -D, --debug            Enable debug logging
+
+Management Commands:
+  history     Commands to work on build records
+  imagetools  Commands to work on images in registry
+
+Commands:
+  bake        Build from a file
+  build       Start a build
+  create      Create a new builder instance
+  dial-stdio  Proxy current stdio streams to builder instance
+  du          Disk usage
+  inspect     Inspect current builder instance
+  ls          List builder instances
+  prune       Remove build cache
+  rm          Remove one or more builder instances
+  stop        Stop builder instance
+  use         Set the current builder instance
+  version     Show buildx version information
+
+Run 'docker buildx COMMAND --help' for more information on a command.
+
+Experimental commands and flags are hidden. Set BUILDX_EXPERIMENTAL=1 to show them.
+jakubklas@Jakubs-MacBook-Pro myapp-docker % brew install python@3.11
+==> Fetching downloads for: python@3.11
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/manifests/3.11.13_1
+############################################################################################################################## 100.0%
+==> Fetching python@3.11
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.11/blobs/sha256:a287ed8327504f43b1d2809b1cacd3abe5675d035335ffda961cda8f7b7
+############################################################################################################################## 100.0%
+==> Pouring python@3.11--3.11.13_1.arm64_sequoia.bottle.tar.gz
+==> /opt/homebrew/Cellar/python@3.11/3.11.13_1/bin/python3.11 -Im ensurepip
+==> /opt/homebrew/Cellar/python@3.11/3.11.13_1/bin/python3.11 -Im pip install -v --no-index --upgrade --isolated --target=/opt/homebr
+==> Caveats
+Python is installed as
+  /opt/homebrew/bin/python3.11
+
+Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to
+`python3.11`, `python3.11-config`, `pip3.11` etc., respectively, are installed into
+  /opt/homebrew/opt/python@3.11/libexec/bin
+
+You can install Python packages with
+  pip3.11 install <package>
+They will install into the site-package directory
+  /opt/homebrew/lib/python3.11/site-packages
+
+`idle3.11` requires tkinter, which is available separately:
+  brew install python-tk@3.11
+
+gdbm (`dbm.gnu`) is no longer included in this formula, but it is available separately:
+  brew install python-gdbm@3.11
+`dbm.ndbm` changed database backends in Homebrew Python 3.11.
+If you need to read a database from a previous Homebrew Python created via `dbm.ndbm`,
+you'll need to read your database using the older version of Homebrew Python and convert to another format.
+`dbm` still defaults to `dbm.gnu` when it is installed.
+
+If you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:
+  brew install python3
+
+For more information about Homebrew and Python, see: https://docs.brew.sh/Homebrew-and-Python
+==> Summary
+🍺  /opt/homebrew/Cellar/python@3.11/3.11.13_1: 3,306 files, 62MB
+==> Running `brew cleanup python@3.11`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+jakubklas@Jakubs-MacBook-Pro myapp-docker % 
+  [Restored 11 Oct 2025 at 18:54:59]
+Last login: Sat Oct 11 18:54:52 on console
