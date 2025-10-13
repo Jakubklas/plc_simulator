@@ -1,0 +1,7 @@
+/venv
+*.txt
+/.claude
+/.vscode# Large files to exclude
+*.txt
+venv/
+*.jar
