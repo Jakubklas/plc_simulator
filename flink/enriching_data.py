@@ -1,6 +1,8 @@
 from pyflink.datastream import StreamExecutionEnvironment, RuntimeExecutionMode
 from pyflink.datastream.window import TumblingProcessingTimeWindows, SlidingProcessingTimeWindows
+from pyflink.datastream.window import TumblingEventTimeWindows, SlidingEventTimeWindows
 from pyflink.datastream.functions import ProcessWindowFunction, ProcessFunction
+from pyflink.common.watermark_strategy import TimestampAssigner
 from pyflink.table import StreamTableEnvironment
 from pyflink.table.expressions import col
 from pyflink.common import Types, Time, WatermarkStrategy
@@ -35,5 +37,44 @@ tumbling_word_count = words_with_ts \
     .reduce(lambda a, b: (a[0], a[1]+b[1], max(a[2], b[2])))
 
 
+print("\n=== TUMBLING WINDOW (2 seconds) ===")
 tumbling_word_count.print()
-env.execute()
+
+sliding_word_count = words_with_ts \
+    .key_by(lambda x: x[0]) \
+    .window(SlidingProcessingTimeWindows.of(Time.seconds(2), Time.seconds(5))) \
+    .reduce(lambda a, b: (a[0], a[1] + b[1], max(a[2], b[2])))
+
+print("\n=== SLIDING WINDOW (5 sec slide each 2 sec) ===")
+sliding_word_count.print()
+
+
+print("\n=== TUMBLING EVENT WINDOW (20 miliseconds) ===")
+tumbling_word_count.print()
+
+
+class EventTimeStamps(TimestampAssigner):
+    def extract_timestamp(self, value, record_timestamp):
+        return value[2]
+
+watermark_strategy = WatermarkStrategy \
+    .for_monotonous_timestamps() \
+    .with_timestamp_assigner(EventTimeStamps())
+
+words_with_event_time = words_with_ts.assign_timestamps_and_watermarks(watermark_strategy)
+
+tumbling_word_count = words_with_event_time \
+    .key_by(lambda x: x[0]) \
+    .window(TumblingEventTimeWindows.of(Time.milliseconds(20))) \
+    .reduce(lambda a, b: (a[0], a[1] + b[1], max(a[2], b[2])))
+
+print("\n=== TUMBLING EVENT TIME WINDOW (5 sec window, 2 sec slide) ===")
+tumbling_word_count.print()
+
+sliding_word_count = words_with_event_time \
+    .key_by(lambda x: x[0]) \
+    .window(SlidingEventTimeWindows.of(Time.milliseconds(100), Time.milliseconds(20))) \
+    .reduce(lambda a, b: (a[0], a[1] + b[1], max(a[2], b[2])))
+
+print("\n=== SLIDING EVENT TIME WINDOW (5 sec window, 2 sec slide) ===")
+sliding_word_count.print()
