@@ -2,6 +2,7 @@ version: '3'
 services:
   kafka:
     image: apache/kafka:latest
+    container_name: kafka-server
     ports:
       - "9092:9092"
     environment:
@@ -14,3 +15,12 @@ services:
       KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+  postgres:
+    image: postgres:13
+    container_name: postgres-sink
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: readings
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
