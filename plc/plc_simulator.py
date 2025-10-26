@@ -2,7 +2,7 @@ import time
 import random
 import threading
 from pymodbus.server import StartTcpServer
-from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
+from pymodbus.datastore import ModbusDeviceContext, ModbusServerContext
 from pymodbus.datastore import ModbusSequentialDataBlock
 
 class WaterPlantSimulator:
@@ -129,14 +129,14 @@ def run_server():
     
     # Initialize data blocks
     # Modbus function codes: 1=Coils, 2=Discrete Inputs, 3=Holding Registers, 4=Input Registers
-    store = ModbusSlaveContext(
+    store = ModbusDeviceContext(
         co=ModbusSequentialDataBlock(0, [0]*100),  # Coils (digital outputs)
         di=ModbusSequentialDataBlock(0, [0]*100),  # Discrete Inputs (digital inputs)
         hr=ModbusSequentialDataBlock(0, [0]*100),  # Holding Registers (read/write analog)
         ir=ModbusSequentialDataBlock(0, [0]*100)   # Input Registers (read-only analog)
     )
     
-    context = ModbusServerContext(slaves=store, single=True)
+    context = ModbusServerContext(devices=store, single=True)
     
     # Start the simulation
     simulator = WaterPlantSimulator(context)

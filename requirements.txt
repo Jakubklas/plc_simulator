@@ -3,3 +3,4 @@ pandas
 # apache-flink
 numpy
 pymodbus
+kafka-python

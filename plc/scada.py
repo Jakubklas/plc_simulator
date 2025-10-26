@@ -44,20 +44,23 @@ class WaterPlantSCADA:
         """
         try:
             # Read input registers 0-5
-            result = self.client.read_input_registers(address=0, count=6, slave=0x00)
+            result = self.client.read_input_registers(0)
             
             if result.isError():
                 print(f"Error reading sensors: {result}")
                 return None
             
-            # Decode values (reverse the scaling from PLC)
+            # Check how many registers we got
+            print(f"Got {len(result.registers)} registers: {result.registers}")
+            
+            # Decode values (reverse the scaling from PLC) - use defaults if registers missing
             sensors = {
-                'temperature': result.registers[0] / 100.0,
-                'inlet_pressure': result.registers[1] / 100.0,
-                'outlet_pressure': result.registers[2] / 100.0,
-                'flow_rate': result.registers[3] / 10.0,
-                'ph_level': result.registers[4] / 100.0,
-                'timestamp': result.registers[5]
+                'temperature': result.registers[0] / 100.0 if len(result.registers) > 0 else 0.0,
+                'inlet_pressure': result.registers[1] / 100.0 if len(result.registers) > 1 else 0.0,
+                'outlet_pressure': result.registers[2] / 100.0 if len(result.registers) > 2 else 0.0,
+                'flow_rate': result.registers[3] / 10.0 if len(result.registers) > 3 else 0.0,
+                'ph_level': result.registers[4] / 100.0 if len(result.registers) > 4 else 0.0,
+                'timestamp': result.registers[5] if len(result.registers) > 5 else 0
             }
             
             return sensors
@@ -70,21 +73,23 @@ class WaterPlantSCADA:
         Read discrete inputs (status indicators)
         """
         try:
-            result = self.client.read_discrete_inputs(address=0, count=8, slave=0x00)
+            result = self.client.read_discrete_inputs(0)
             
             if result.isError():
                 print(f"Error reading status: {result}")
                 return None
             
+            print(f"Got {len(result.bits)} discrete inputs: {result.bits}")
+            
             status = {
-                'pump_running': result.bits[0],
-                'valve_open': result.bits[1],
-                'heater_on': result.bits[2],
-                'flow_high': result.bits[3],
-                'temp_alarm': result.bits[4],
-                'pressure_alarm': result.bits[5],
-                'emergency_stop': result.bits[6],
-                'system_healthy': result.bits[7]
+                'pump_running': result.bits[0] if len(result.bits) > 0 else False,
+                'valve_open': result.bits[1] if len(result.bits) > 1 else False,
+                'heater_on': result.bits[2] if len(result.bits) > 2 else False,
+                'flow_high': result.bits[3] if len(result.bits) > 3 else False,
+                'temp_alarm': result.bits[4] if len(result.bits) > 4 else False,
+                'pressure_alarm': result.bits[5] if len(result.bits) > 5 else False,
+                'emergency_stop': result.bits[6] if len(result.bits) > 6 else False,
+                'system_healthy': result.bits[7] if len(result.bits) > 7 else False
             }
             
             return status
@@ -97,7 +102,7 @@ class WaterPlantSCADA:
         Read setpoint values from holding registers
         """
         try:
-            result = self.client.read_holding_registers(address=0, count=3, slave=0x00)
+            result = self.client.read_holding_registers(0)
             
             if result.isError():
                 print(f"Error reading setpoints: {result}")
@@ -119,7 +124,7 @@ class WaterPlantSCADA:
         Write a setpoint to holding register
         """
         try:
-            result = self.client.write_register(address=register, value=value, slave=0x00)
+            result = self.client.write_register(register, value)
             
             if result.isError():
                 print(f"Error writing setpoint: {result}")
@@ -153,7 +158,7 @@ class WaterPlantSCADA:
         Write to a coil (digital output)
         """
         try:
-            result = self.client.write_coil(address=address, value=state, slave=0x00)
+            result = self.client.write_coil(address, state)
             
             if result.isError():
                 print(f"Error controlling {name}: {result}")
