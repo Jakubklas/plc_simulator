@@ -5,3 +5,4 @@ numpy
 pymodbus
 kafka-python
 psycopg2-binary
+dotenv
