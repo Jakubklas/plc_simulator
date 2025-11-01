@@ -1,6 +1,7 @@
 pandas
-# grpcio-tools
-# apache-flink
+grpcio-tools
+apache-flink
 numpy
 pymodbus
 kafka-python
+psycopg2-binary

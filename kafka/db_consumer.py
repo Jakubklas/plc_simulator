@@ -4,18 +4,22 @@ from pyflink.common.serialization import SimpleStringSchema, Encoder
 from pyflink.datastream.window import TumblingProcessingTimeWindows, TumblingEventTimeWindows
 from pyflink.common.watermark_strategy import TimestampAssigner, WatermarkStrategy
 from pyflink.datastream.connectors.file_system import FileSink, OutputFileConfig, RollingPolicy
-from pyflink.common import Types, Time
+from pyflink.datastream.connectors.jdbc import JdbcSink, JdbcConnectionOptions, JdbcExecutionOptions
+
+from pyflink.common import Types, Time, Row
 import json
+from db import setup_postgres
 
 # Set up StreamExecutionEnvironment & set paralllelism to 1
 env = StreamExecutionEnvironment.get_execution_environment()
 env.set_parallelism(1)
-env.enable_checkpointing(1000 * 10)     # Check-pooint every 10 seconds
+env.enable_checkpointing(10000)
 
 # Add Kafka JAR file location (starting with "file://") -> loads java classes
 env.add_jars(
     "file:///Users/jakubklas/factory_readings/flink-sql-connector-kafka-3.1.0-1.18.jar",     # Kafka JAR
-    
+    "file:///Users/jakubklas/factory_readings/postgresql-42.7.1.jar",                        # PostGres JAR
+    "file:///Users/jakubklas/factory_readings/flink-connector-jdbc-3.1.2-1.18.jar"           # JDBC Conector JAR
 )
 
 # Create Kafka props dict & the KafkaConsumer class w/ SimpleStringSchema()
@@ -53,43 +57,41 @@ wm = WatermarkStrategy \
 
 # Create a DataBase sink config
 
-from pyflink.datastream.connectors.jdbc import JdbcSink, JdbcConnectionOptions, JdbcExecutionOptionsBuilder
-
 jdbc_sink = JdbcSink.sink(
-    sql="INSERT INTO sensor_data (area, sensor_id, avg_values, count, timestamp) VALUES (?, ?, ?, ?, ?)",
-    type_info=Types.ROW([Types.STRING(), Types.STRING(), Types.FLOAT(), Types.INT(), Types.LONG()]),
-    jdbc_connection_options= JdbcConnectionOptionsBuilder() \
-        .with_user_name("postgres") \
-        .with_password("12345") \
-        .with_url("localhost:5432")     # Running in a docker container
+    "INSERT INTO sensor_data (area, sensor_id, avg_value, count, timestamp) VALUES (?, ?, ?, ?, ?)",
+    Types.ROW([Types.STRING(), Types.STRING(), Types.DOUBLE(), Types.INT(), Types.LONG()]),
+    JdbcConnectionOptions.JdbcConnectionOptionsBuilder()
+        .with_url("jdbc:postgresql://localhost:5432/readings")
+        .with_driver_name("org.postgresql.Driver")
+        .with_user_name("postgres")
+        .with_password("12345")
+        .build(),
+
+    # Execution Options are 'optional', BUT if not present Flink defaults to batch size 5,000
+    # meaning data sits in memory until 5K reocrds arrive - may be too long
+    JdbcExecutionOptions.builder()
+        .with_batch_size(100)
+        .with_batch_interval_ms(1000)
+        .with_max_retries(3)
         .build()
 )
 
+# Create DB and DB Table if they don;t exist
+setup_postgres()
 
-# Start streaming and handle closures gracefully
-
+# Streaming data as 'Row' (actual metadata) instead of Tuple (python native)
 stream = stream \
     .map(lambda x: parse_json(x)) \
-    .assign_timestamps_and_watermarks(wm) \
-    .map(lambda x: (x[0], x[1], x[2], x[3], 1)) \
-    .filter(lambda x: x is not None) \
-    .key_by(lambda x: x[1]) \
-    .window(TumblingEventTimeWindows.of(size=Time.seconds(3))) \
-    .reduce(lambda a, b:
-            (a[0], a[1], a[2], max(a[3],b[3]), a[4]+b[4])
-            ) \
-    .map(lambda x: (x[0], x[1], x[2]/x[4], x[3], x[4])) \
-    .map(lambda x: f"{x[1]} | {x[0]} | Avg. Value: {round(x[2], 2)} | Count: {x[4]} | Ts: {x[3]}",
-            output_type=Types.STRING())
+    .map(lambda x: Row(x[1], x[0], float(x[2]), 1, int(x[3])),
+         output_type=Types.ROW([Types.STRING(), Types.STRING(), Types.DOUBLE(), Types.INT(), Types.LONG()]))
 
-# Stream to sink
-if stream.sink_to(jdbc_sink):
-    print("="*60)
-    print("STREAM RUNNING. SINKNG DATA INTO A TEXT FILE")
-    print("="*60)
+# Add JDBC sink 
+stream.add_sink(jdbc_sink)
+print("="*60)
+print("STREAM RUNNING. SINKNG DATA INTO A DATABASE")
+print("="*60)
 
 try:
-    stream.print()
     env.execute()
 except KeyboardInterrupt:
     print("Strem closed...")
