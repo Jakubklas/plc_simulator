@@ -2927,3 +2927,325 @@ Querying DB...
 2025-11-01 20:18:41,874 - postgres - INFO - Generated 80 rows...
 2025-11-01 20:18:43,759 - __main__ - WARNING - Stopped reading data:
 
+2025-11-01 20:56:13,650 - postgres - INFO - Connection received
+2025-11-01 20:56:13,678 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 20:56:13,684 - postgres - ERROR - Error returning connection to the pool:
+syntax error at or near "FOREIGN"
+LINE 8:                         FOREIGN KEY (sensor_id) REFERENCES r...
+                                ^
+
+2025-11-01 20:56:13,685 - postgres - INFO - Connection returned
+2025-11-01 20:57:46,428 - postgres - INFO - Connection received
+2025-11-01 20:57:46,440 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 20:57:46,448 - postgres - ERROR - Error returning connection to the pool:
+there is no unique constraint matching given keys for referenced table "readings"
+
+2025-11-01 20:57:46,448 - postgres - INFO - Connection returned
+2025-11-01 20:59:30,344 - postgres - INFO - Connection received
+2025-11-01 20:59:30,355 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 20:59:30,357 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 20:59:30,365 - postgres - ERROR - Error returning connection to the pool:
+there is no unique constraint matching given keys for referenced table "oee"
+
+2025-11-01 20:59:30,365 - postgres - INFO - Connection returned
+2025-11-01 21:02:17,300 - postgres - INFO - Connection received
+2025-11-01 21:02:17,317 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 21:02:17,320 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 21:02:17,325 - postgres - ERROR - Error returning connection to the pool:
+syntax error at or near ")"
+LINE 6:                     );
+                            ^
+
+2025-11-01 21:02:17,325 - postgres - INFO - Connection returned
+2025-11-01 21:03:39,957 - postgres - INFO - Connection received
+2025-11-01 21:03:39,971 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 21:03:39,974 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 21:03:39,977 - postgres - INFO - 'locations' table created successfuly.
+2025-11-01 21:03:39,981 - postgres - INFO - Changes commited.
+2025-11-01 21:03:39,981 - postgres - INFO - Connection returned
+2025-11-01 21:03:41,956 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:03:44,020 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:03:46,087 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:03:46,986 - postgres - INFO - Connection received
+2025-11-01 21:03:46,987 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:03:47,006 - postgres - ERROR - Error querying database: column l.location does not exist
+LINE 13: ...            LEFT JOIN locations l ON o.location = l.location
+                                                              ^
+HINT:  Perhaps you meant to reference the column "o.location".
+
+2025-11-01 21:03:47,007 - postgres - INFO - Connection returned
+2025-11-01 21:06:02,410 - postgres - INFO - Connection received
+2025-11-01 21:06:02,425 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 21:06:02,428 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 21:06:02,428 - postgres - INFO - 'locations' table created successfuly.
+2025-11-01 21:06:02,436 - postgres - INFO - Changes commited.
+2025-11-01 21:06:02,436 - postgres - INFO - Connection returned
+2025-11-01 21:06:04,394 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:06:06,468 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:06:08,534 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:06:09,441 - postgres - INFO - Connection received
+2025-11-01 21:06:09,442 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:06:09,447 - postgres - ERROR - Error querying database: column l.location does not exist
+LINE 13: ...            LEFT JOIN locations l ON o.location = l.location
+                                                              ^
+HINT:  Perhaps you meant to reference the column "o.location".
+
+2025-11-01 21:06:09,448 - postgres - INFO - Connection returned
+2025-11-01 21:06:35,897 - postgres - INFO - Connection received
+2025-11-01 21:06:35,909 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 21:06:35,912 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 21:06:35,912 - postgres - INFO - 'locations' table created successfuly.
+2025-11-01 21:06:35,915 - postgres - INFO - Changes commited.
+2025-11-01 21:06:35,915 - postgres - INFO - Connection returned
+2025-11-01 21:06:37,887 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:06:39,959 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:06:42,033 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:06:42,921 - postgres - INFO - Connection received
+2025-11-01 21:06:42,922 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:06:42,937 - postgres - INFO - Got 0 results...
+2025-11-01 21:06:42,938 - postgres - INFO - Connection returned
+2025-11-01 21:06:44,097 - postgres - INFO - Generated 80 rows...
+2025-11-01 21:06:46,174 - postgres - INFO - Generated 100 rows...
+2025-11-01 21:06:46,280 - postgres - INFO - Connection received
+2025-11-01 21:06:46,298 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:06:46,300 - postgres - INFO - Changes commited.
+2025-11-01 21:06:46,300 - postgres - INFO - Connection returned
+2025-11-01 21:06:46,300 - postgres - INFO - Connection received
+2025-11-01 21:06:46,304 - postgres - ERROR - Error returning connection to the pool:
+invalid input syntax for type numeric: "m3/s"
+LINE 3:                     VALUES ('flowmeter_2', 'm3/s', 2.6591071...
+                                                   ^
+
+2025-11-01 21:06:46,305 - postgres - INFO - Connection returned
+2025-11-01 21:06:46,305 - postgres - INFO - Connection received
+2025-11-01 21:06:46,311 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:06:46,312 - postgres - INFO - Changes commited.
+2025-11-01 21:06:46,312 - postgres - INFO - Connection returned
+2025-11-01 21:06:49,944 - postgres - INFO - Connection received
+2025-11-01 21:06:49,945 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:06:49,950 - postgres - INFO - Got 6 results...
+2025-11-01 21:06:49,951 - postgres - INFO - Connection returned
+2025-11-01 21:06:56,958 - postgres - INFO - Connection received
+2025-11-01 21:06:56,959 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:06:56,973 - postgres - INFO - Got 6 results...
+2025-11-01 21:06:56,989 - postgres - INFO - Connection returned
+2025-11-01 21:07:03,992 - postgres - INFO - Connection received
+2025-11-01 21:07:03,993 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:03,997 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:03,998 - postgres - INFO - Connection returned
+2025-11-01 21:07:11,004 - postgres - INFO - Connection received
+2025-11-01 21:07:11,006 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:11,012 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:11,013 - postgres - INFO - Connection returned
+2025-11-01 21:07:18,015 - postgres - INFO - Connection received
+2025-11-01 21:07:18,017 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:18,018 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:18,019 - postgres - INFO - Connection returned
+2025-11-01 21:07:25,025 - postgres - INFO - Connection received
+2025-11-01 21:07:25,026 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:25,039 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:25,044 - postgres - INFO - Connection returned
+2025-11-01 21:07:32,050 - postgres - INFO - Connection received
+2025-11-01 21:07:32,052 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:32,062 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:32,063 - postgres - INFO - Connection returned
+2025-11-01 21:07:39,069 - postgres - INFO - Connection received
+2025-11-01 21:07:39,070 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:39,074 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:39,075 - postgres - INFO - Connection returned
+2025-11-01 21:07:46,081 - postgres - INFO - Connection received
+2025-11-01 21:07:46,082 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:46,088 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:46,089 - postgres - INFO - Connection returned
+2025-11-01 21:07:53,097 - postgres - INFO - Connection received
+2025-11-01 21:07:53,100 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:07:53,109 - postgres - INFO - Got 6 results...
+2025-11-01 21:07:53,111 - postgres - INFO - Connection returned
+2025-11-01 21:08:00,116 - postgres - INFO - Connection received
+2025-11-01 21:08:00,118 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:08:00,141 - postgres - INFO - Got 6 results...
+2025-11-01 21:08:00,142 - postgres - INFO - Connection returned
+2025-11-01 21:08:07,144 - postgres - INFO - Connection received
+2025-11-01 21:08:07,145 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:08:07,146 - postgres - INFO - Got 6 results...
+2025-11-01 21:08:07,146 - postgres - INFO - Connection returned
+2025-11-01 21:08:14,149 - postgres - INFO - Connection received
+2025-11-01 21:08:14,152 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:08:14,162 - postgres - INFO - Got 6 results...
+2025-11-01 21:08:14,163 - postgres - INFO - Connection returned
+2025-11-01 21:08:21,168 - postgres - INFO - Connection received
+2025-11-01 21:08:21,171 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:08:21,199 - postgres - INFO - Got 6 results...
+2025-11-01 21:08:21,201 - postgres - INFO - Connection returned
+2025-11-01 21:08:28,210 - postgres - INFO - Connection received
+2025-11-01 21:08:28,211 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:08:28,224 - postgres - INFO - Got 6 results...
+2025-11-01 21:08:28,226 - postgres - INFO - Connection returned
+2025-11-01 21:08:35,235 - postgres - INFO - Connection received
+2025-11-01 21:08:35,242 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:08:35,251 - postgres - INFO - Got 6 results...
+2025-11-01 21:08:35,253 - postgres - INFO - Connection returned
+2025-11-01 21:08:38,117 - __main__ - WARNING - Stopped reading data:
+
+2025-11-01 21:08:39,219 - postgres - INFO - Connection received
+2025-11-01 21:08:39,228 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 21:08:39,233 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 21:08:39,233 - postgres - INFO - 'locations' table created successfuly.
+2025-11-01 21:08:39,236 - postgres - INFO - Changes commited.
+2025-11-01 21:08:39,236 - postgres - INFO - Connection returned
+2025-11-01 21:08:40,172 - __main__ - WARNING - Stopped reading data:
+
+2025-11-01 21:09:23,260 - postgres - INFO - Connection received
+2025-11-01 21:09:23,272 - postgres - INFO - 'readings' table created successfuly.
+2025-11-01 21:09:23,276 - postgres - INFO - 'oee' table created successfuly.
+2025-11-01 21:09:23,276 - postgres - INFO - 'locations' table created successfuly.
+2025-11-01 21:09:23,281 - postgres - INFO - Changes commited.
+2025-11-01 21:09:23,281 - postgres - INFO - Connection returned
+2025-11-01 21:09:25,242 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:09:27,312 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:09:29,371 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:09:30,287 - postgres - INFO - Connection received
+2025-11-01 21:09:30,287 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:09:30,313 - postgres - INFO - Got 0 results...
+2025-11-01 21:09:30,314 - postgres - INFO - Connection returned
+2025-11-01 21:09:31,447 - postgres - INFO - Generated 80 rows...
+2025-11-01 21:09:33,521 - postgres - INFO - Generated 100 rows...
+2025-11-01 21:09:33,626 - postgres - INFO - Connection received
+2025-11-01 21:09:33,642 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:09:33,645 - postgres - INFO - Changes commited.
+2025-11-01 21:09:33,645 - postgres - INFO - Connection returned
+2025-11-01 21:09:33,645 - postgres - INFO - Connection received
+2025-11-01 21:09:33,654 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:09:33,655 - postgres - INFO - Changes commited.
+2025-11-01 21:09:33,656 - postgres - INFO - Connection returned
+2025-11-01 21:09:33,656 - postgres - INFO - Connection received
+2025-11-01 21:09:33,658 - postgres - INFO - Inserted 5 rows into the database
+2025-11-01 21:09:33,659 - postgres - INFO - Changes commited.
+2025-11-01 21:09:33,659 - postgres - INFO - Connection returned
+2025-11-01 21:09:35,631 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:09:37,317 - postgres - INFO - Connection received
+2025-11-01 21:09:37,317 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:09:37,323 - postgres - INFO - Got 6 results...
+2025-11-01 21:09:37,325 - postgres - INFO - Connection returned
+2025-11-01 21:09:37,691 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:09:39,768 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:09:41,842 - postgres - INFO - Generated 80 rows...
+2025-11-01 21:09:43,932 - postgres - INFO - Generated 100 rows...
+2025-11-01 21:09:44,037 - postgres - INFO - Connection received
+2025-11-01 21:09:44,055 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:09:44,058 - postgres - INFO - Changes commited.
+2025-11-01 21:09:44,058 - postgres - INFO - Connection returned
+2025-11-01 21:09:44,058 - postgres - INFO - Connection received
+2025-11-01 21:09:44,065 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:09:44,067 - postgres - INFO - Changes commited.
+2025-11-01 21:09:44,068 - postgres - INFO - Connection returned
+2025-11-01 21:09:44,068 - postgres - INFO - Connection received
+2025-11-01 21:09:44,069 - postgres - INFO - Inserted 5 rows into the database
+2025-11-01 21:09:44,070 - postgres - INFO - Changes commited.
+2025-11-01 21:09:44,070 - postgres - INFO - Connection returned
+2025-11-01 21:09:44,329 - postgres - INFO - Connection received
+2025-11-01 21:09:44,330 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:09:44,333 - postgres - INFO - Got 6 results...
+2025-11-01 21:09:44,334 - postgres - INFO - Connection returned
+2025-11-01 21:09:46,037 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:09:48,105 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:09:50,177 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:09:51,340 - postgres - INFO - Connection received
+2025-11-01 21:09:51,341 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:09:51,344 - postgres - INFO - Got 6 results...
+2025-11-01 21:09:51,345 - postgres - INFO - Connection returned
+2025-11-01 21:09:52,259 - postgres - INFO - Generated 80 rows...
+2025-11-01 21:09:54,322 - postgres - INFO - Generated 100 rows...
+2025-11-01 21:09:54,427 - postgres - INFO - Connection received
+2025-11-01 21:09:54,439 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:09:54,443 - postgres - INFO - Changes commited.
+2025-11-01 21:09:54,443 - postgres - INFO - Connection returned
+2025-11-01 21:09:54,443 - postgres - INFO - Connection received
+2025-11-01 21:09:54,450 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:09:54,452 - postgres - INFO - Changes commited.
+2025-11-01 21:09:54,452 - postgres - INFO - Connection returned
+2025-11-01 21:09:54,452 - postgres - INFO - Connection received
+2025-11-01 21:09:54,453 - postgres - INFO - Inserted 5 rows into the database
+2025-11-01 21:09:54,454 - postgres - INFO - Changes commited.
+2025-11-01 21:09:54,454 - postgres - INFO - Connection returned
+2025-11-01 21:09:56,427 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:09:58,352 - postgres - INFO - Connection received
+2025-11-01 21:09:58,352 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:09:58,361 - postgres - INFO - Got 6 results...
+2025-11-01 21:09:58,362 - postgres - INFO - Connection returned
+2025-11-01 21:09:58,500 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:10:00,582 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:10:02,666 - postgres - INFO - Generated 80 rows...
+2025-11-01 21:10:04,729 - postgres - INFO - Generated 100 rows...
+2025-11-01 21:10:04,832 - postgres - INFO - Connection received
+2025-11-01 21:10:04,847 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:10:04,850 - postgres - INFO - Changes commited.
+2025-11-01 21:10:04,850 - postgres - INFO - Connection returned
+2025-11-01 21:10:04,850 - postgres - INFO - Connection received
+2025-11-01 21:10:04,857 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:10:04,859 - postgres - INFO - Changes commited.
+2025-11-01 21:10:04,859 - postgres - INFO - Connection returned
+2025-11-01 21:10:04,859 - postgres - INFO - Connection received
+2025-11-01 21:10:04,860 - postgres - INFO - Inserted 5 rows into the database
+2025-11-01 21:10:04,860 - postgres - INFO - Changes commited.
+2025-11-01 21:10:04,860 - postgres - INFO - Connection returned
+2025-11-01 21:10:05,365 - postgres - INFO - Connection received
+2025-11-01 21:10:05,365 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:10:05,367 - postgres - INFO - Got 6 results...
+2025-11-01 21:10:05,367 - postgres - INFO - Connection returned
+2025-11-01 21:10:06,842 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:10:08,912 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:10:10,987 - postgres - INFO - Generated 60 rows...
+2025-11-01 21:10:12,373 - postgres - INFO - Connection received
+2025-11-01 21:10:12,374 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:10:12,384 - postgres - INFO - Got 6 results...
+2025-11-01 21:10:12,385 - postgres - INFO - Connection returned
+2025-11-01 21:10:13,068 - postgres - INFO - Generated 80 rows...
+2025-11-01 21:10:15,148 - postgres - INFO - Generated 100 rows...
+2025-11-01 21:10:15,249 - postgres - INFO - Connection received
+2025-11-01 21:10:15,266 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:10:15,267 - postgres - INFO - Changes commited.
+2025-11-01 21:10:15,268 - postgres - INFO - Connection returned
+2025-11-01 21:10:15,268 - postgres - INFO - Connection received
+2025-11-01 21:10:15,274 - postgres - INFO - Inserted 100 rows into the database
+2025-11-01 21:10:15,275 - postgres - INFO - Changes commited.
+2025-11-01 21:10:15,276 - postgres - INFO - Connection returned
+2025-11-01 21:10:15,277 - postgres - INFO - Connection received
+2025-11-01 21:10:15,277 - postgres - INFO - Inserted 5 rows into the database
+2025-11-01 21:10:15,278 - postgres - INFO - Changes commited.
+2025-11-01 21:10:15,278 - postgres - INFO - Connection returned
+2025-11-01 21:10:17,260 - postgres - INFO - Generated 20 rows...
+2025-11-01 21:10:19,326 - postgres - INFO - Generated 40 rows...
+2025-11-01 21:10:19,388 - postgres - INFO - Connection received
+2025-11-01 21:10:19,388 - postgres - INFO - 
+Querying DB...
+2025-11-01 21:10:19,391 - postgres - INFO - Got 6 results...
+2025-11-01 21:10:19,392 - postgres - INFO - Connection returned
+2025-11-01 21:10:19,398 - __main__ - WARNING - Stopped reading data:
+

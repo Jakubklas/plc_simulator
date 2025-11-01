@@ -38,7 +38,7 @@ class PostgresHandle:
             logger.error(f"Error returning connection to the pool:\n{e}")
             raise
     
-    def create_table(self, drop=True) -> None:
+    def create_tables(self, drop=True) -> None:
         try:
             conn = self.get_conn()
             with conn.cursor() as cursor:
@@ -46,6 +46,8 @@ class PostgresHandle:
                     cursor.execute(
                         """
                         DROP TABLE IF EXISTS readings;
+                        DROP TABLE IF EXISTS oee;
+                        -- DROP TABLE IF EXISTS locations;
                         """
                     )
                 cursor.execute(
@@ -59,7 +61,30 @@ class PostgresHandle:
                     );
                     """
                 )
-            logger.info("Table created successfuly.")
+                logger.info("'readings' table created successfuly.")
+                cursor.execute(
+                    """
+                    CREATE TABLE IF NOT EXISTS oee (
+                        sensor_id VARCHAR(50),
+                        up_time DECIMAL(5, 2),
+                        location VARCHAR(100),
+                        record_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        PRIMARY KEY (sensor_id, record_time)
+                    );
+                    """
+                )
+                logger.info("'oee' table created successfuly.")
+                cursor.execute(
+                    """
+                    CREATE TABLE IF NOT EXISTS locations (
+                        location_code VARCHAR(100) PRIMARY KEY,
+                        site_name VARCHAR(100),
+                        address_number INT
+                    );
+                    """
+                )
+                logger.info("'locations' table created successfuly.")
+
             conn.commit()
             logger.info("Changes commited.")
         except Exception as e:
@@ -69,7 +94,7 @@ class PostgresHandle:
         finally:
             self.put_conn(conn)
 
-    def insert_data(self, data: list[tuple]) -> None:
+    def insert_readings(self, data: list[tuple]) -> None:
         try:
             conn = self.get_conn()
             sql="""
@@ -80,6 +105,53 @@ class PostgresHandle:
                         value = EXCLUDED.value
                         , unit = EXCLUDED.unit
                     ;
+                """
+            with conn.cursor() as cursor:
+                execute_batch(cur=cursor, sql=sql, argslist=data, page_size=100)
+                logger.info(f"Inserted {len(data)} rows into the database")
+            
+            conn.commit()
+            logger.info("Changes commited.")
+        except Exception as e:
+            logger.error(f"Error returning connection to the pool:\n{e}")
+            conn.rollback()
+            raise
+        finally:
+            self.put_conn(conn)
+
+    def insert_oee(self, data: list[tuple]) -> None:
+        try:
+            conn = self.get_conn()
+            sql="""
+                INSERT INTO oee (sensor_id, up_time, location)
+                    VALUES (%s, %s, %s)
+                    ON CONFLICT (sensor_id, record_time)
+                    DO UPDATE SET
+                        up_time = EXCLUDED.up_time
+                        , location = EXCLUDED.location
+                    ;
+                """
+            with conn.cursor() as cursor:
+                execute_batch(cur=cursor, sql=sql, argslist=data, page_size=100)
+                logger.info(f"Inserted {len(data)} rows into the database")
+            
+            conn.commit()
+            logger.info("Changes commited.")
+        except Exception as e:
+            logger.error(f"Error returning connection to the pool:\n{e}")
+            conn.rollback()
+            raise
+        finally:
+            self.put_conn(conn)
+
+    def insert_locations(self, data: list[tuple]) -> None:
+        try:
+            conn = self.get_conn()
+            sql="""
+                INSERT INTO locations (location_code, site_name, address_number)
+                    VALUES (%s, %s, %s)
+                    ON CONFLICT (location_code)
+                    DO NOTHING;
                 """
             with conn.cursor() as cursor:
                 execute_batch(cur=cursor, sql=sql, argslist=data, page_size=100)
@@ -114,38 +186,73 @@ class PostgresHandle:
         finally:
             self.put_conn(conn)
 
-    def generate_row(self):
-        try:
-            sensor = random.choice(["theremometer", "flowmeter", "barometer"])
-            unit = {
-                "theremometer": "C",
-                "flowmeter": "m3/s",
-                "barometer": "psi"
-            }[sensor]
-            sensor = f"{sensor}_{int(random.uniform(1, 4))}"
-            value = random.uniform(0.12, 56.87)
-            return (sensor, unit, value)
+    def generate_rows(self, table):
+        if table == "readings":
+            try:
+                sensor = random.choice(["theremometer", "flowmeter", "barometer"])
+                unit = {
+                    "theremometer": "C",
+                    "flowmeter": "m3/s",
+                    "barometer": "psi"
+                }[sensor]
+                sensor = f"{sensor}_{int(random.uniform(1, 4))}"
+                value = random.uniform(0.12, 56.87)
+                return (sensor, unit, value)
+            
+            except Exception as e:
+                logger.error(f"Stopped generating data:\n{e}")
+
+        elif table == "oee":
+            try:
+                sensor_id = random.choice(["theremometer", "flowmeter", "barometer"])
+                sensor_id = f"{sensor_id}_{int(random.uniform(1, 4))}"
+                up_time = random.uniform(0.23, 100.0)
+                location = random.choice(["LBA3", "HBB1", "YYK2"])
+                return (sensor_id, up_time, location)
+            
+            except Exception as e:
+                logger.error(f"Stopped generating data:\n{e}")
         
-        except Exception as e:
-            logger.error(f"Stopped generating data:\n{e}")
+        elif table == "locations":
+            try:
+                location_code = random.choice(["LBA3", "HBB1", "YYK2"])
+                site_name = {
+                    "LBA3": "London",
+                    "HBB1": "Manchester",
+                    "YYK2": "Yorkshire"
+                }[location_code]
+                address_number = random.randint(1, 50)
+                return (location_code, site_name, address_number)
+            
+            except Exception as e:
+                logger.error(f"Stopped generating data:\n{e}")
+
+        else:
+            raise ValueError(f"Incorrect table name. Tabel '{table}' does not exist.")
     
     def generator(self):
         try:
             while True:
-                rows = []
-                while len(rows) < 100:
-                    rows.append(self.generate_row())
-                    if len(rows) % 20 == 0:
-                        logger.info(f"Generated {len(rows)} rows...")
+                readings = []
+                oee = []
+                locations = []
+                while len(readings) < 100:
+                    readings.append(self.generate_rows("readings"))
+                    oee.append(self.generate_rows("oee"))
+                    if len(readings) % 20 == 0:
+                        logger.info(f"Generated {len(readings)} rows...")
+                        locations.append(self.generate_rows("locations"))
                     time.sleep(0.1)               
-                self.insert_data(rows)
+                self.insert_readings(readings)
+                self.insert_oee(oee)
+                self.insert_locations(locations)
                 
         except KeyboardInterrupt as e:
                 logger.warning(f"Stopped generating data:\n{e}")
         finally:
-            if len(rows) > 0:
-                self.insert_data(rows)
-                rows=[]
+            if len(readings) > 0:
+                self.insert_readings(readings)
+                readings=[]
         
             
 

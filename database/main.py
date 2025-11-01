@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 if __name__ == "__main__":
     # Connect to the DB & create table
     pg = PostgresHandle()
-    pg.create_table()
+    pg.create_tables()
 
     # Generate data in a thread
     thread = threading.Thread(target=pg.generator)
@@ -33,7 +33,21 @@ if __name__ == "__main__":
             time.sleep(7)
             rows, cols = pg.query(
                 """
-                SELECT * FROM readings ORDER BY record_time DESC LIMIT 5;
+                SELECT 
+                    r.sensor
+                    , o.location
+                    , l.site_name
+                    , l.address_number
+                    , r.value
+                    , r.unit
+                    , o.up_time
+                    
+                FROM readings r
+                LEFT JOIN oee o ON r.sensor=o.sensor_id
+                LEFT JOIN locations l ON o.location = l.location_code
+
+                ORDER BY o.up_time DESC
+                LIMIT 6;
                 """
             )
             print("\n",tabulate.tabulate(rows, cols, "grid"), "\n")
