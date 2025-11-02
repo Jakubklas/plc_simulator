@@ -59,6 +59,9 @@ class PostgresHandle:
                         record_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                         PRIMARY KEY (sensor, record_time)
                     );
+
+                    CREATE INDEX readings_record_time ON readings(record_time);
+                    CREATE INDEX readings_sensor ON readings(sensor);
                     """
                 )
                 logger.info("'readings' table created successfuly.")
@@ -71,6 +74,9 @@ class PostgresHandle:
                         record_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                         PRIMARY KEY (sensor_id, record_time)
                     );
+
+                    CREATE INDEX oee_record_time ON oee(record_time);
+                    CREATE INDEX oee_sensor_id ON oee(sensor_id);
                     """
                 )
                 logger.info("'oee' table created successfuly.")

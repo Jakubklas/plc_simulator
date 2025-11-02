@@ -41,12 +41,13 @@ if __name__ == "__main__":
                     , r.value
                     , r.unit
                     , o.up_time
+                    , r.record_time
                     
                 FROM readings r
                 LEFT JOIN oee o ON r.sensor=o.sensor_id
                 LEFT JOIN locations l ON o.location = l.location_code
 
-                ORDER BY o.up_time DESC
+                ORDER BY r.record_time DESC
                 LIMIT 6;
                 """
             )
