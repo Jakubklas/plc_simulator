@@ -40,8 +40,8 @@ class WaterPlantSimulator:
         
         while self.running:
             # Read control states from coils (addresses 0-9)
-            slave_id = 0x00
-            coils = self.context[slave_id].getValues(1, 0, count=10)
+            device_id = 0x00
+            coils = self.context[device_id].getValues(1, 0, count=10)
             
             self.pump_running = bool(coils[0])
             self.valve_open = bool(coils[1])
@@ -90,7 +90,7 @@ class WaterPlantSimulator:
             #                                |  |      Values to write as a list
             #                                |  |      |
             #                                v  v      v
-            self.context[slave_id].setValues(4, 0, registers)
+            self.context[device_id].setValues(4, 0, registers)
             
             # Write status to discrete inputs (addresses 0-9)
             discrete_inputs = [
@@ -107,17 +107,19 @@ class WaterPlantSimulator:
             ]
             
             # Update discrete inputs
-            self.context[slave_id].setValues(2, 0, discrete_inputs)
+            self.context[device_id].setValues(2, 0, discrete_inputs)
             
-            # Also write current setpoints to holding registers (addresses 0-9)
-            # These can be read and written by the client
-            holding_regs = [
-                int(25.0 * 100),  # Temperature setpoint
-                int(3.5 * 100),   # Pressure setpoint
-                int(150 * 10),    # Flow rate setpoint
-                0, 0, 0, 0, 0, 0, 0
-            ]
-            self.context[slave_id].setValues(3, 0, holding_regs)
+            # Initialize holding registers only once (don't overwrite client changes)
+            # Read current values first to preserve client writes
+            current_holding = self.context[device_id].getValues(3, 0, count=10)
+            if all(val == 0 for val in current_holding):  # Only set defaults if empty
+                holding_regs = [
+                    int(25.0 * 100),  # Temperature setpoint
+                    int(3.5 * 100),   # Pressure setpoint
+                    int(150 * 10),    # Flow rate setpoint
+                    0, 0, 0, 0, 0, 0, 0
+                ]
+                self.context[device_id].setValues(3, 0, holding_regs)
             
             time.sleep(1)  # Update every second
 
@@ -182,7 +184,7 @@ def run_server():
     # Start Modbus TCP server on port 502 (requires root/sudo)
     # If permission denied, try port 5020 instead
     try:
-        StartTcpServer(context=context, address=("0.0.0.0", 502))
+        StartTcpServer(context=context, address=("0.0.0.0", 5020))
     except PermissionError:
         print("\nPort 502 requires root privileges. Trying port 5020...")
         print("Note: Update client to connect to port 5020\n")

@@ -6,3 +6,8 @@ pymodbus
 kafka-python
 psycopg2-binary
 dotenv
+fastapi
+pydantic
+opcua
+asyncua
+requests

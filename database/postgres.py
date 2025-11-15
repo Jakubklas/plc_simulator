@@ -61,7 +61,6 @@ class PostgresHandle:
                     );
 
                     CREATE INDEX readings_record_time ON readings(record_time);
-                    CREATE INDEX readings_sensor ON readings(sensor);
                     """
                 )
                 logger.info("'readings' table created successfuly.")

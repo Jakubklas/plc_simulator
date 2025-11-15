@@ -38,13 +38,17 @@ class WaterPlantSCADA:
             print("\nDisconnected from PLC")
     
 
-    def read_sensors(self):
+    def read_sensors(self, device_id):
         """
-        Read all sensor values from input registers
+        Reading INPUT REGISTERS --> sensor 32-bit read-only float values
         """
         try:
-            # Read input registers 0-5
-            result = self.client.read_input_registers(0)
+            # Read input registers addresses from 0 to 5
+            result = self.client.read_input_registers(
+                address=0, 
+                count=5,
+                device_id=device_id
+                )
             
             if result.isError():
                 print(f"Error reading sensors: {result}")
@@ -68,12 +72,16 @@ class WaterPlantSCADA:
             print(f"Error reading sensors: {e}")
             return None
     
-    def read_status(self):
+    def read_status(self, device_id):
         """
-        Read discrete inputs (status indicators)
+        Reading DISCRETE INPUTS --> sensor 16-bit read-only boolean values
         """
         try:
-            result = self.client.read_discrete_inputs(0)
+            result = self.client.read_discrete_inputs(
+                address=0,
+                count=5,
+                device_id=device_id
+                )
             
             if result.isError():
                 print(f"Error reading status: {result}")
@@ -99,7 +107,7 @@ class WaterPlantSCADA:
     
     def read_setpoints(self):
         """
-        Read setpoint values from holding registers
+        Reading HOLDING REGISTERS --> sensor 32-bit read/write float values 
         """
         try:
             result = self.client.read_holding_registers(0)
@@ -121,7 +129,7 @@ class WaterPlantSCADA:
     
     def write_setpoint(self, register, value):
         """
-        Write a setpoint to holding register
+        Writing to HOLDING REGISTERS --> sensor 32-bit read/write float values 
         """
         try:
             result = self.client.write_register(register, value)
@@ -155,7 +163,7 @@ class WaterPlantSCADA:
     
     def _write_coil(self, address, state, name):
         """
-        Write to a coil (digital output)
+        Writing to COILS --> sensor 16-bit read/write boolean values 
         """
         try:
             result = self.client.write_coil(address, state)
