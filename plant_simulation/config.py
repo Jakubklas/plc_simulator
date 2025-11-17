@@ -1,0 +1,3 @@
+ENDPOINT = ""
+URI = ""
+NAME = ""
