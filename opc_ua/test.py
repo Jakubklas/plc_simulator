@@ -1,120 +1,88 @@
+import logging
 import asyncio
-import asyncua
-from asyncua import Server
-from asyncua.common.node import Node
+from threading import Thread
+from opcua_server import WaterPlantPLC
+import time
+from config import *
 
+# Configure basic logger
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(module)s - %(funcName)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
 
-class WaterPlantPLC:
-    def __init__(self) -> None:
-        self.server = Server()
-        self.running = True
+async def test_client():
+    print()
+    print()
 
-        # Initialize the variables to some numbers
-        # Sensors
-        self.temp = None
-        self.presssure = None
-        self.flow = None
-        self.ph = None
-        # States
-        self.pump_on = False
-        self.valve_open = False
-        self.heater_on = False
-        # Nodes dict (comes useful when assignong nodes in bulk)
-        self.nodes = {}
+    from asyncua import Client
+    
+    async def _conn(client, action):
+        if action == "connect":
+            return await client.connect()
+        elif action == "disconnect":
+            return await client.disconnect()
 
-    async def start_server(self):
-        # Set up the server endpoint (url and name)
-        await self.server.init()
-        self.server.set_endpoint("opc.tcp://localhost:4840/freeopcua/server")
-        self.server.set_server_name("Water Plant PLC")
+    client = Client(ENDPOINT)
+    await _conn(client, "connect")
 
-        # Setup the server http namespace (uri + index)
-        uri = "http://waterplant.example.com"
-        idx = await self.server.register_namespace(uri)
+    # Root Node Information
+    root = client.get_root_node()
+    print("="*10,"ROOT NODE", "="*10)
+    print(f"Root Node ID: {root.nodeid}")
+    print(f"Root Name: {await root.read_browse_name()}\n")
 
-        # Create the server tree root
-        objects = self.server.get_objects_node()
+    # Immediate Children of the root node
+    print("="*10,"Root Node Children", "="*10)
+    children = await root.get_children()
+    for child in children:
+        name  = await child.read_browse_name()
+        node_class  = await child.read_node_class()
+        print(f"----> Node name: {name}")
+        print(f"----> Node class: {node_class}\n")
 
-        # Add objects to the node, sensor variables
-        plant = await objects.add_object(idx, "WaterPlant")
-
-        self.nodes["temp"] = plant.add_variable(idx, "Temperature", 0.0)        # Variables always floats (no scaling)
-        self.nodes["pressure"] = plant.add_variable(idx, "InletPressure", 0.0)
-        self.nodes["flow"] = plant.add_variable(idx, "FlowRate", 0.0)
-        self.nodes["ph"] = plant.add_variable(idx, "PhRatio", 0.0)
-
-        for k in ["temp", "pressure", "flow", "ph"]:
-            await self.nodes[k].set_writeable(False)
-
-        # Read-Write Controls
-        controls = await plant.add_object(idx, "Controls")
-        self.nodes["pump"] = controls.add_variable(idx, "PumpControl", False)
-        self.nodes["valve"] = controls.add_variable(idx, "ValveControl", False)
-        self.nodes["heater"] = controls.add_variable(idx, "HeaterControl", False)
-
-        for k in ["pump", "valve", "heater"]:
-            await self.nodes[k].set_writeable(True)
-
-        # Read-only status
-        status = await plant.add_object(idx, "Controls")
-        self.nodes["pump_on"] = controls.add_variable(idx, "PumpRunning", False)
-        self.nodes["valve_open"] = controls.add_variable(idx, "ValveOpen", False)
-        self.nodes["heater_on"] = controls.add_variable(idx, "HeaterOn", False)
-
-        for k in ["pump_on", "valve_open", "heater_on"]:
-            await self.nodes[k].set_writeable(False)
-
-        # Read-Write Setpoints (Holding Registers = PLC input variables)
-        setpoints = await plant.add_object(idx, "SetPoints")
-        self.nodes["temp_sp"] = plant.add_variable(idx, "TemperatureSetpoint", 25.0)
-        self.nodes["pressure_sp"] = plant.add_variable(idx, "InletPressureSetpoint", 3.5)
-        self.nodes["flow_sp"] = plant.add_variable(idx, "FlowRateSetpoint", 150.0)
-
-        for k in ["pump_on", "valve_open", "heater_on"]:
-            await self.nodes[k].set_writeable(True)
+    # Pick the objects root child and dig deeper
+    print("="*10,"Objects Node", "="*10)
+    objects_node = await root.get_child(f"{0}:Objects")
+    children = await objects_node.get_children()
+    for child in children:
+        name  = await child.read_browse_name()
+        node_class  = await child.read_node_class()
+        print(f"--------> Node name: {name}")
+        print(f"--------> Node class: {node_class}\n")
+    
+    print("="*10,"WaterPlant Node", "="*10)
+    waterplant_node = await objects_node.get_child(f"{2}:WaterPlant")
+    children = await waterplant_node.get_children()
+    for child in children:
+        name  = await child.read_browse_name()
+        node_class  = await child.read_node_class()
+        node_value = None
         
-        await self._view_tree(uri, idx)
-
-    async def _view_tree(self, uri, idx):
-        print("\n" + "="*70)
-        print("WATER TREATMENT PLANT OPC UA SERVER")
-        print("="*70)
-        print(f"Endpoint: opc.tcp://0.0.0.0:4840/freeopcua/server/")
-        print(f"Namespace: {uri}")
-        print(f"Namespace Index: {idx}")
-        print("\nNode Structure:")
-        print("  Objects/")
-        print("    └─ WaterPlant/")
-        print("       ├─ Sensors/ (read-only)")
-        print("       │  ├─ Temperature")
-        print("       │  ├─ InletPressure")
-        print("       │  ├─ OutletPressure")
-        print("       │  ├─ FlowRate")
-        print("       │  └─ PhLevel")
-        print("       ├─ Controls/ (read-write)")
-        print("       │  ├─ PumpControl")
-        print("       │  ├─ ValveControl")
-        print("       │  └─ HeaterControl")
-        print("       ├─ Status/ (read-only)")
-        print("       │  ├─ PumpRunning")
-        print("       │  ├─ ValveOpen")
-        print("       │  ├─ HeaterOn")
-        print("       │  ├─ HighFlowAlarm")
-        print("       │  └─ HighTempAlarm")
-        print("       └─ Setpoints/ (read-write)")
-        print("          ├─ TemperatureSetpoint")
-        print("          ├─ PressureSetpoint")
-        print("          └─ FlowSetpoint")
-        print("="*70)
-        print("\nServer is running. Press Ctrl+C to stop.\n")
-
-    async def XXX(self):
-        pass
-
-        
+        print(f"------------> Node name: {name}")
+        print(f"------------> Node class: {node_class}")
+        if node_class == 2:
+            node_value = await child.read_value()
+            val_type = await child.read_data_type_as_variant_type()
+            print(f"------------> Node Value: {round(node_value, 2)}")
+            print(f"------------> Value D-Type: {val_type}")
+        print()
 
 
 
+    await _conn(client, "disconnect")
 
 
 
+if __name__ == "__main__":
+    # Run the PLC simulation on a separate thread
+    plc = WaterPlantPLC(ENDPOINT, URI, NAME)
+    thread = Thread(target=lambda: asyncio.run(plc.run()), daemon=False)
+    thread.start()
+    time.sleep(1)
+
+    
+
+    # asyncio.run(test_client())
+    

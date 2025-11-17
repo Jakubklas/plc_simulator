@@ -1,17 +1,7 @@
-"""
-OPC UA SCADA Client for Water Treatment Plant
-
-Key advantages over Modbus:
-- No address memorization (browse the server!)
-- Native data types (no scaling conversions)
-- Cleaner read/write operations
-- Built-in server discovery
-"""
-
 import asyncio
 from asyncua import Client
 from datetime import datetime
-
+from config import *
 
 class WaterPlantSCADA:
     """
@@ -19,11 +9,11 @@ class WaterPlantSCADA:
     Much simpler and more intuitive!
     """
     
-    def __init__(self, endpoint):
+    def __init__(self, endpoint, uri):
         self.endpoint = endpoint
+        self.uri = uri
         self.client = None
         self.nodes = {}
-    
     
     async def connect(self):
         """
@@ -57,7 +47,7 @@ class WaterPlantSCADA:
         print("Discovering server nodes...")
         
         # Get namespace index (usually 2 for custom namespaces)
-        nsidx = await self.client.get_namespace_index("http://waterplant.example.com")
+        nsidx = await self.client.get_namespace_index(self.uri)
         
         # Navigate to our plant object
         root = self.client.get_objects_node()
@@ -384,6 +374,7 @@ async def main():
     """
     import sys
     
+
     if len(sys.argv) < 2:
         print("Usage: python3 opcua_client.py <SERVER_IP>")
         print("Example: python3 opcua_client.py 192.168.1.100")
@@ -393,7 +384,7 @@ async def main():
     server_ip = sys.argv[1]
     endpoint = f"opc.tcp://{server_ip}:4840/freeopcua/server/"
     
-    scada = WaterPlantSCADA(endpoint)
+    scada = WaterPlantSCADA(ENDPOINT, URI)
     
     if not await scada.connect():
         sys.exit(1)
