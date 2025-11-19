@@ -9,12 +9,13 @@ from config import *
 logger = logging.getLogger(__name__)
 
 class DesinfectionPLC:
-    def __init__(self, endpoint=ENDPOINT, uri=URI, name=NAME) -> None:
+    def __init__(self, endpoint=ENDPOINT_MT, uri=URI_MT, name=NAME_MT, emit_logs=True) -> None:
         self.server = Server()
         self.endpoint = endpoint
         self.uri = uri
         self.name = name
         self.nodes = {}
+        self.emit_logs=emit_logs
 
         # Init sensors
         self.uv_intensity = 0.0
@@ -31,9 +32,9 @@ class DesinfectionPLC:
 
         # Start server at endpoint & give it name and uri
         await self.server.init()
-        self.server.set_endpoint(ENDPOINT)
-        self.server.set_server_name(NAME)
-        idx = await self.server.register_namespace(URI)
+        self.server.set_endpoint(ENDPOINT_MT)
+        self.server.set_server_name(NAME_MT)
+        idx = await self.server.register_namespace(URI_MT)
 
         # Get the objects node of the server & add the plant as object
         objects = self.server.get_objects_node()
@@ -89,15 +90,15 @@ class DesinfectionPLC:
                 await asyncio.sleep(1)
         
                 # Log progress each N seconds
-                if (counter % 5 == 0) & (counter != 0):
+                if self.emit_logs & (counter % 5 == 0) & (counter != 0):
                     logger.info(f"""
     ========= STATUS =========
-    --> UV Lamp On: {self.nodes["uv_lamp"]}
-    --> Dosing Pump On: {self.nodes["dosing_pump"]}
+    --> UV Lamp On: {self.uv_lamp_on}
+    --> Dosing Pump On: {self.dosing_pump_on}
 
-    --> UV Intensity: {self.nodes["uv"]}
-    --> Chlorine Level: {self.nodes["chlorine"]}
-    --> Turbidity: {self.nodes["turbidity"]}
+    --> UV Intensity: {self.uv_intensity:.1f}
+    --> Chlorine Level: {self.chlorine_lvl:.2f}
+    --> Turbidity: {self.turbidity:.2f}
                     """)
 
             # Graceful server shutdown if interrupted
